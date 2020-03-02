@@ -7,7 +7,7 @@
     <description>{{ site.description | xml_escape }}</description>
     <image>
       <url>
-        https://s.gravatar.com/avatar/2b5f147e3d1bbe08b831c426a3153e45?s=80
+        https://umanking.github.io/assets/images/profile.png
       </url>
     </image>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
