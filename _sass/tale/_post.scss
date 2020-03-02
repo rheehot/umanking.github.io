@@ -31,10 +31,6 @@
     margin: 0 0 1rem;
     text-align: left;
   }
-
-  a:hover {
-    text-decoration: underline;
-  }
   strong {
     // background-color: #FFFFE0;
     color: #8565fc;
@@ -79,6 +75,7 @@
     // background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff),linear-gradient(#8565fc, #8565fc);
   }
   a:hover {
+    text-decoration: underline;
     color: #8565fc;
     text-decoration-color: #8565fc;  
   }

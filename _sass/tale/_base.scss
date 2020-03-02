@@ -64,3 +64,10 @@ img {
 td {
   vertical-align: top;
 }
+.archive-item{
+  a:hover {
+    text-decoration: underline;
+    color: #8565fc;
+    text-decoration-color: #8565fc;  
+    }
+}
