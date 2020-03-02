@@ -5,7 +5,7 @@
 }
 
 main,
-footer,
+footer>.footer_wrap,
 .nav-container {
   display: block;
   margin: 0 auto;
@@ -80,13 +80,73 @@ footer,
   }
 }
 
+// footer {
+//   font-family: $serif-secondary;
+//   padding: 2rem 0;
+//   text-align: center;
+
+//   span {
+//     color: $default-color;
+//     font-size: .8rem;
+//   }
+// }
 footer {
   font-family: $serif-secondary;
-  padding: 2rem 0;
-  text-align: center;
+  padding: 36px 0 46px 0;
+  background-color: $grey-3;
+  color: #8898aa;
+  border-top: 1px solid $grey-2;
+  border-bottom: 1px solid $grey-2;
+  
+  .footer_wrap {
+      font-style: normal;
+      position: relative;
 
-  span {
-    color: $default-color;
-    font-size: .8rem;
+      .information {
+          display: inline-block;
+
+          .myname {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 4px;
+}
+          .email {
+              font-size: 16px;
+              color: #8898aa;
+          }
+          
+          a.email:hover {
+              opacity: .6;
+          }
+          
+          .accounts {
+              margin-top: 36px;
+              a {
+                  margin-right: 24px;
+                  svg {
+                      fill: #8898aa;
+                      width: 20px;
+                  }
+              }
+              a:hover {
+                  opacity: .6;
+              }
+          }
+      }
+      .copyright {
+          float: right;
+          position: absolute;
+          right: 0;
+          bottom: 2px;
+
+          @media (max-width: 10px) {
+              float: none;
+              position: static;
+              margin-top: 6px;
+          }
+          span {
+              font-size: 16px;
+          }
+      }
   }
 }

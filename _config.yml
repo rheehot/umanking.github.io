@@ -1,17 +1,17 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          GGHan Blog
+description:    "Java, Spring Backend 기술 블로그"
+baseurl:        ""
+url:            "https://umanking.github.io"
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
+google_analytics: UA-130245279-5
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Geonguk Han
+  url:          https://umanking.github.io
+  email:        umanking@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -31,11 +31,12 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+# permalink:      /:year/:month/:day/:title
+permalink:      date
+paginate:       10
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
 # Disqus (Set to your disqus id)
-disqus:         jekyll-tale
+# disqus:         jekyll-tale
