@@ -30,15 +30,20 @@
     font-weight: 700;
     margin: .5rem 0;
 
-    &:hover{
-      opacity: .6;
-    }
+    // &:hover{
+    //   opacity: .6;
+    // }
   }
 
-  &-text {
-    &:hover {
-      opacity: .6;
-    }
+  // &-text {
+  //   &:hover {
+  //     opacity: .6;
+  //   }
+  // }
+
+  &-type {
+    // color: $blue;
+    color: #8565fc;
   }
 
   &-line {
