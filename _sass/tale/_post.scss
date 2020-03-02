@@ -29,15 +29,24 @@
 
   p {
     margin: 0 0 1rem;
-    text-align: justify;
+    text-align: left;
   }
 
   a:hover {
     text-decoration: underline;
   }
-
+  strong {
+    background-color: #FFFFE0;
+  }
   img {
     margin: 0 auto 0.5rem;
+  }
+
+  .postImage {
+    max-width: 40%;
+    // margin-left: auto;
+    // margin-right: auto;
+    // display: block;
   }
 
   img + em {

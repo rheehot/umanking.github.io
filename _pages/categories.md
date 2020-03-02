@@ -14,7 +14,7 @@ permalink: /categories/
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
       <span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></span>
-      <span style="color: gray; font-size: small;" class="post-date">{{post.date | date_to_long_string }}</span>
+      <!-- <span style="color: gray; font-size: small;" class="post-date">{{post.date | date_to_long_string }}</span> -->
     </article>
     {% endfor %}
   </div>
