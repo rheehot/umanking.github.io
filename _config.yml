@@ -1,42 +1,43 @@
 # Site settings
-title:          GGHan Blog
-description:    "Java, Spring Backend 기술 블로그"
-baseurl:        ""
-url:            "https://umanking.github.io"
+title: GGHan Blog
+description: "Java, Spring Backend 기술 블로그"
+baseurl: ""
+url: "https://umanking.github.io"
 
 # Google Analytics
 google_analytics: UA-130245279-5
 
 # Author
 author:
-  name:         Geonguk Han
-  url:          https://umanking.github.io
-  email:        umanking@gmail.com
+  name: Geonguk Han
+  url: https://umanking.github.io
+  email: umanking@gmail.com
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
   - _pages
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 # Gems
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-redirect-from
+
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 # permalink:      /:year/:month/:day/:title
-permalink:      date
-paginate:       10
+permalink: date
+paginate: 10
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
+exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 # Disqus (Set to your disqus id)
 # disqus:         jekyll-tale
