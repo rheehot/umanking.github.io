@@ -3,12 +3,11 @@ layout: post
 title: "[JPA] Casecade 옵션"
 categories: [JPA]
 tags: [jpa]
-redirect_from: 
-- 2019/04/12/jpa-cascade/
-- jpa/jpa-cascade/
+redirect_from:
+  - 2019/04/12/jpa-cascade/
+  - jpa/jpa-cascade/
 date: 2019-04-12 09:01:48
 ---
-
 
 > 멤버(Member)와 사물함(Locker) 1:1 매핑 상황을 살펴보고, cascade 옵션이 어떤 상황에서 쓰이는지 알아보자.
 
@@ -56,7 +55,7 @@ public class Locker {
 
 Member -> Locker 단방향 1:1 매핑에 대해서 살펴보자.
 
-중요한 것은, `@OneToOne` 과 `@JoinColumn`을 사용해서 관계 매핑을 했고, 참조하는(방향성을 가지는) Locker를 해당 멤버 필드의 Type으로 지정했다. 명시적으로 `@JoinColumn`의 `name 프로퍼티`를 참조하는 LOCKER\_ID로 설정했다.
+중요한 것은, `@OneToOne` 과 `@JoinColumn`을 사용해서 관계 매핑을 했고, 참조하는(방향성을 가지는) Locker를 해당 멤버 필드의 Type으로 지정했다. 명시적으로 `@JoinColumn`의 `name 프로퍼티`를 참조하는 LOCKER_ID로 설정했다.
 
 ### 테스트 케이스
 
