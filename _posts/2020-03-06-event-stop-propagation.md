@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 이벤트 preventDefault와 stopPropagation의 차이
-categoires: [Share]
+categories: [Share]
 date: 2020-03-06 09:57 +0900
 ---
 자주 나오는데 정확히 몰라서 넘어갔던 event.preventDefault 와 event.stopPropagation에 대해서 알아보자.
