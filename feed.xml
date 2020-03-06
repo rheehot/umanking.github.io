@@ -7,7 +7,7 @@
     <description>{{ site.description | xml_escape }}</description>
     <image>
       <url>
-        https://umanking.github.io/assets/images/profile.png
+        https://umanking.github.io/assets/images/profile1.png
       </url>
     </image>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
