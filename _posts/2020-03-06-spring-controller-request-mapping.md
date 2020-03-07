@@ -64,7 +64,3 @@ AbstractHandlerMethodMapping 클래스의 `detectHandlerMethods` 메서드에서
 ## 참조
 
 [https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html)
-
-```
-
-```

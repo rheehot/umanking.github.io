@@ -66,7 +66,7 @@ td {
   vertical-align: top;
 }
 
-.archive-item {
+.related-post {
   a {
     transition: all 0.2s ease-in-out;
     background-position: 0% 100%, 110% 90%, 0% 98%;
@@ -90,5 +90,11 @@ td {
     border-radius: 50%;
     left: -22px;
     top: 16px;
+  }
+  
+  h2 {
+    padding: 30px 0 12px 0;
+    font-weight: 700;
+    font-size: 25px;
   }
 }
