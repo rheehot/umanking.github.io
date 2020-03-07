@@ -4,13 +4,12 @@ title: "[Spring] Spring Data Common 프로젝트 살펴보기"
 date: 2019-04-12 09:03:09
 categories: [Spring]
 tags: [Spring]
-redirect_from: 
-- 2019/04/12/spring-data-common/
-- spring/spring-data-common/
+redirect_from:
+  - 2019/04/12/spring-data-common/
+  - spring/spring-data-common/
 ---
-> Spring Data는 여러 가지 프로젝트로 되어 있다. 그중에서 Common 프로젝트에 대해서 알아보자.
 
-[##_Image|kage@dkdxVK/btqt838FRZS/rNf2fK7Nikct474OtbIxH1/img.png|alignCenter|data-filename="spring-data.png"|_##]
+> Spring Data는 여러 가지 프로젝트로 되어 있다. 그중에서 Common 프로젝트에 대해서 알아보자.
 
 Spring Data는 여러개의 프로젝트로 구성되어 있다. 그 중에서 JPA에서 공통으로 사용하는 Common 프로젝트에 대해서 알아보자. (물론 다른 Redis,MongoDb 저장소에서도 공통으로 사용하니까 Common으로 따로 뺀 것)
 
