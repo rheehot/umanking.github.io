@@ -2,8 +2,9 @@
 layout: default
 ---
 <div class="post">
+  <!--
   <div class="post-info">
-    <span style="font-style: italic;">Written by</span>
+     <span style="font-style: italic;">Written by</span>
     {% if page.author %}
     {{ page.author }}
     {% else %}
@@ -11,23 +12,17 @@ layout: default
     {% endif %}
 
     {% if page.date %}
-    <br>
+    <br> 
     <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
+    
   </div>
-
+-->
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
-  {% include ad.html %}
 
   {{ content }}
 </div>
-{% include ad.html %}
-
-{% include relatedPost.html %}
-{% include ad.html %}
-
-{% include utterance_comments.html %}
 
 <div class="pagination">
   {% if page.next.url %}
@@ -36,11 +31,5 @@ layout: default
   {% if page.previous.url %}
   <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
   {% endif %}
-
   <a href="#" class="top">Top</a>
 </div>
-
-{% include ad.html %}
-{% include ad.html %}
-{% include ad.html %}
-{% include ad.html %}{% include ad.html %}{% include ad.html %}

@@ -9,9 +9,9 @@ google_analytics: UA-130245279-5
 
 # Author
 author:
-  name: Geonguk
+  name: GGHan
   url: https://umanking.github.io
-  email: umanking@gmail.com
+  # email: umanking@gmail.com
 
 # Build settings
 markdown: kramdown
@@ -35,7 +35,7 @@ plugins:
 # Permalinks
 # permalink:      /:year/:month/:day/:title
 permalink: date
-paginate: 100
+paginate: 30
 
 # Excludes
 exclude: [Gemfile, Gemfile.lock, tale.gemspec]
