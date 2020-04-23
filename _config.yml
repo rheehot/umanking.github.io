@@ -1,6 +1,6 @@
 # Site settings
-title: GGHan Blog
-description: "Java, Spring Backend 기술 블로그"
+title: umanking blog
+description: "java, spring backend blog"
 baseurl: ""
 url: "https://umanking.github.io"
 
@@ -9,9 +9,9 @@ google_analytics: UA-130245279-5
 
 # Author
 author:
-  name: GGHan
+  name: umanking
   url: https://umanking.github.io
-  # email: umanking@gmail.com
+  email: umanking@gmail.com
 
 # Build settings
 markdown: kramdown
