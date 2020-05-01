@@ -4,7 +4,7 @@ title: "Modern Java in Action - #2 동작파리미터화 코드 전달하기"
 date: 2020-05-01 15:04 +0900
 categories: [java]
 tags: [Java, ModernJavaInAction]
-# published: false
+published: false
 ---
 
 농부가 재고량을 파악하는 애플리케이션이 있다고 생각해봅니다.
