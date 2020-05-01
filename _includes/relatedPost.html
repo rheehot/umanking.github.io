@@ -1,17 +1,17 @@
 <div class="related-post">
     <h2>📚연관 포스팅</h2>
     <div id="archives">
-        {% for category in site.categories %}
+        {% for category in site.tags %}
         <div class="archive-group">
-            {% capture category_name %}{{ category | first }}{% endcapture %}
-            {% capture page_category_name %}{{ page.categories | first }}{% endcapture %}
-            {% if category_name == page_category_name %}
+            {% capture tag_name %}{{ category | first }}{% endcapture %}
+            {% capture page_tag_name %}{{ page.tags | first }}{% endcapture %}
+            {% if tag_name == page_tag_name %}
             <div id="#{{ category_name | slugize }}"></div>
             <p></p>
 
             <!-- <h3 class="category-head">{{ category_name }}</h3> -->
             <a name="{{ category_name | slugize }}"></a>
-            {% for post in site.categories[category_name] %}
+            {% for post in site.tags[tag_name] %}
             <article class="archive-item">
                 <ul>
                     <li :before><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
