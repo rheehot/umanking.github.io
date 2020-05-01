@@ -2,10 +2,10 @@
 layout: post
 title: "[JPA] 1:N 매핑"
 date: 2019-04-12 09:05:25
-redirect_from: 
-- 2019/04/12/jpa-1-n-mapping/
-- jpa/jpa-1-n-mapping/
-category: [JPA]
+redirect_from:
+  - 2019/04/12/jpa-1-n-mapping/
+  - jpa/jpa-1-n-mapping/
+categories: [jpa]
 tags: [jpa]
 ---
 
@@ -122,4 +122,3 @@ public class DemoApplicationTests {
 ```
 
 각각 Team과 Member가 저장되고, member.getTeam()를 통해서 객체 그래프 탐색까지 잘 되는 것을 확인할 수 있습니다.
-

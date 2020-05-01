@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "[JPA] 엔티티 일부 데이터만 조회하는 Projection"
-categories: [JPA]
+categories: [jpa]
 tags: [jpa]
 date: 2019-04-12 09:08:56
-redirect_from: 
-- 2019/04/12/jpa-projection/
-- jpa/jpa-projection
+redirect_from:
+  - 2019/04/12/jpa-projection/
+  - jpa/jpa-projection
 ---
+
 > JPA를 사용해서 엔티티의 일부 데이터만 가져오는 Projection에 대해서 알아보자.
 
 ```java
@@ -59,7 +60,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 먼저 comment의 id를 통해서 Post를 찾는 쿼리메서드를 만들고 테스트를 돌려보자.
 
 ```
-Hibernate: 
+Hibernate:
     select
         comment0_.id as id1_0_,
         comment0_.best as best2_0_,
@@ -67,12 +68,12 @@ Hibernate:
         comment0_.down as down4_0_,
         comment0_.post_id as post_id7_0_,
         comment0_.up as up5_0_,
-        comment0_.votes as votes6_0_ 
+        comment0_.votes as votes6_0_
     from
-        comment comment0_ 
+        comment comment0_
     left outer join
-        post post1_ 
-            on comment0_.post_id=post1_.id 
+        post post1_
+            on comment0_.post_id=post1_.id
     where
         post1_.id=?
 ```
@@ -86,16 +87,16 @@ Hibernate:
 이렇게 바꾸고 테스트 케이스를 돌리면 다음과 같이 interface에서 정의한 필드 3개만 쿼리문이 실행됨을 알 수 있다.(최적화)
 
 ```
-Hibernate: 
+Hibernate:
     select
         comment0_.comment as col_0_0_,
         comment0_.up as col_1_0_,
-        comment0_.down as col_2_0_ 
+        comment0_.down as col_2_0_
     from
-        comment comment0_ 
+        comment comment0_
     left outer join
-        post post1_ 
-            on comment0_.post_id=post1_.id 
+        post post1_
+            on comment0_.post_id=post1_.id
     where
         post1_.id=?
 ```
@@ -147,7 +148,7 @@ public interface CommentSummary {
 Post와 Comment를 각각 만들어서 저장하고(연관관계 설정함), 그리고 `commentId` 로 조회해서 getVotes()의 어떤 값이 들어가는지 살펴보자.
 
 ```
-Hibernate: 
+Hibernate:
     select
         comment0_.id as id1_0_,
         comment0_.best as best2_0_,
@@ -155,15 +156,15 @@ Hibernate:
         comment0_.down as down4_0_,
         comment0_.post_id as post_id7_0_,
         comment0_.up as up5_0_,
-        comment0_.votes as votes6_0_ 
+        comment0_.votes as votes6_0_
     from
-        comment comment0_ 
+        comment comment0_
     left outer join
-        post post1_ 
-            on comment0_.post_id=post1_.id 
+        post post1_
+            on comment0_.post_id=post1_.id
     where
         post1_.id=?
- ============================= 
+ =============================
 10 1
 
 ```
@@ -186,19 +187,19 @@ public interface CommentSummary {
 ```
 
 ```
-Hibernate: 
+Hibernate:
     select
         comment0_.comment as col_0_0_,
         comment0_.up as col_1_0_,
-        comment0_.down as col_2_0_ 
+        comment0_.down as col_2_0_
     from
-        comment comment0_ 
+        comment comment0_
     left outer join
-        post post1_ 
-            on comment0_.post_id=post1_.id 
+        post post1_
+            on comment0_.post_id=post1_.id
     where
         post1_.id=?
- ============================= 
+ =============================
 10 1
 
 ```

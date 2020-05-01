@@ -1,20 +1,20 @@
 ---
 layout: post
 title: "IntelliJ, Gradle 테스트가 느릴때"
-categories: [Share]
+categories: [share]
 date: 2020-03-07 11:28 +0900
 ---
+
 > Gradle로 테스트 케이스를 작성하는데, cleanTest, CompileJava ... 와 같이 여러개의 task를 실행해서 테스트 케이스 동작하는 게 느릴때 해결하는 방법에 대해서 알아보자.
 
 ![](https://user-images.githubusercontent.com/28615416/76135091-26f96d00-6067-11ea-8d54-24af3238cf11.png)
-*상품을 테스트 하는 코드 (Junit5)*
+_상품을 테스트 하는 코드 (Junit5)_
 
 아주 간단한 테스트 케이스이고, Spring 전체 빈을 만들어서 주입하는 경우가 아니라, 정말 `유닛테스트` 이다.
 당연히 매우 빠르게 동작하리라 기대했지만, 결과는 다음과 같이 여러가지 `task` 를 거친다.
 
 ![](https://user-images.githubusercontent.com/28615416/76135199-10074a80-6068-11ea-80b5-af6358a70fbe.png)
-*다양한 gradle의 task를 거침(느리다..)*
-
+_다양한 gradle의 task를 거침(느리다..)_
 
 ## 해결방법👍
 

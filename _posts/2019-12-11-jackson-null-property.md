@@ -2,15 +2,18 @@
 layout: post
 title: Jackson, null 필드 무시하기
 date: 2019-12-11 22:25 +0900
-categories: [Spring]
+categories: [spring]
 tags: [Spring]
 redirect_from:
-- /2019/12/11/jackson-null-property/
-- spring/jackson-null-property/
+  - /2019/12/11/jackson-null-property/
+  - spring/jackson-null-property/
 ---
-백단에서 데이터를 프론트 단에 넘길 때, 객체에 대한 property값이 널인 경우까지 넘어 간다. 
-## 예제 코드 
-```java 
+
+백단에서 데이터를 프론트 단에 넘길 때, 객체에 대한 property값이 널인 경우까지 넘어 간다.
+
+## 예제 코드
+
+```java
 public class Account {
     private String name;
     private int age;
@@ -22,18 +25,20 @@ public void create_account_null_test(){
     Account account = new Account();
     account.setName(null);
     account.setAge(32);
-    
+
     System.out.println(objectMapper.writeValueAsString(account));
 }
 ```
-다음과 같이 null 값의 해당하는 `name` 프로퍼티가 결과로 나온다.  
+
+다음과 같이 null 값의 해당하는 `name` 프로퍼티가 결과로 나온다.
+
 ```java
 {"name":null,"age":32}
 ```
 
+## 1. 지역적으로 처리
 
-## 1. 지역적으로 처리 
-```java 
+```java
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Account {
 
@@ -43,7 +48,8 @@ public class Account {
 }
 ```
 
-## 2. 전역적으로 설정하는 방법 
+## 2. 전역적으로 설정하는 방법
+
 ```java
 @Configuration
 public class JacksonConfiguration {
@@ -57,6 +63,6 @@ public class JacksonConfiguration {
 }
 ```
 
-
 ## Ref
+
 - [practical jackson configuration](stubbornjava.com/posts/practical-jackson-objectmapper-configuration)

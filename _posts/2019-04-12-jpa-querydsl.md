@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "[JPA] QueryDSL 설정방법"
-categories: [JPA]
+categories: [jpa]
 tags: [jpa]
-redirect_from: 
-- 2019/04/12/jpa-querydsl/
-- jpa/jpa-querydsl/
+redirect_from:
+  - 2019/04/12/jpa-querydsl/
+  - jpa/jpa-querydsl/
 date: 2019-04-12 09:06:09
 ---
 
@@ -260,4 +260,4 @@ Hibernate:
 
 ```
 
-쿼리뭔을 보면, where 조건절의 first\_name으로 찾는 것을 확인할 수 있다.
+쿼리뭔을 보면, where 조건절의 first_name으로 찾는 것을 확인할 수 있다.

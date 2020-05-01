@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "[JPA] 쿼리메서드(Lookup 전략)"
-categories: [JPA]
+categories: [jpa]
 tags: [jpa]
-redirect_from: 
-- 2019/04/12/jpa-query-method-lookup-stratege/
-- jpa/jpa-query-method-lookup-stratege/
+redirect_from:
+  - 2019/04/12/jpa-query-method-lookup-stratege/
+  - jpa/jpa-query-method-lookup-stratege/
 date: 2019-04-12 09:07:40
 ---
+
 > JPA에서 쿼리 메서드를 정의하는 방법에 대해서 알아보자.
 
 # QueryLookup 전략
@@ -86,4 +87,3 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 ## 참고
 
 [JPA-QueryMethod](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details)
-

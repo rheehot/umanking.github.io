@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "[JPA] 도메인 클래스 컨버터란?"
-categories: [JPA]
+categories: [jpa]
 tags: [jpa]
-redirect_from: 
-- 2019/04/12/jpa-domain-class-converter/
-- jpa/jpa-domain-class-converter/
+redirect_from:
+  - 2019/04/12/jpa-domain-class-converter/
+  - jpa/jpa-domain-class-converter/
 date: 2019-04-12 09:04:25
 ---
+
 > 도메인 클래스 컨버터에 대해서 알아보자.
 
 도메인 클래스 컨버터는 Spring Data Jpa를 사용하게 되면 Common 프로젝트에 있는 클래스 인데, 간단하게, id-> 엔티티 타입으로 변환 해주거나, 엔티티 -> id 로 변환해 주는 컨버터를 제공해준다. 예제를 통해서 동작하는 지 살펴보자.

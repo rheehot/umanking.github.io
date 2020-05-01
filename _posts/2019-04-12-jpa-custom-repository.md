@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "[JPA] Custom Repository 만들기"
-categories: [JPA]
+categories: [jpa]
 tags: [jpa]
-redirect_from: 
-- 2019/04/12/jpa-custom-repository/
-- jpa/jpa-custom-repository
+redirect_from:
+  - 2019/04/12/jpa-custom-repository/
+  - jpa/jpa-custom-repository
 date: 2019-04-12 09:03:41
- 
 ---
 
 > 저번에 올린 포스팅 설명이 너무 불충분하고 날림😔이라서, 새롭게 정리. 기존의 JpaRepository를 상속받아서 기본적인 CRUD 기능을 사용할 수 있지만, 내가 1)커스텀하게 만들어서 사용하고 싶은 경우와 이미 JpaReposptry에서 제공하는 메서드를 새롭게 2)오버라이딩해서 사용할 수 있는 경우에 대해서 알아보자 .
@@ -66,7 +65,7 @@ public class PostCustomRepositoryImpl implements PostCustomRepository {
 `@Repository`, `@Transactional`를 이용해 빈으로 등록하고, 트랜잭션 활성화를 시켜준다. entityManger를 통해서 JPQL 쿼리를 만들었지만, JdbcTemplate를 이용해서 직접쿼리를 만들 수도 있다. 지금은 Type-safe 하지 않은 쿼리이지만 나중에QueryDsl를 통해서 쿼리문을 코딩하듯이 짤 수 있는 방법에 대해서 알아보자.
 
 ```java
-public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRepository {   
+public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRepository {
 }
 ```
 
@@ -92,7 +91,7 @@ public class JpaTest {
     public void postCustomRepositoryTest() {
         Post post = createPost(); // post만드는 동작
 
-          // 커스텀하게 만든 메서드를 사용해 보자! 
+          // 커스텀하게 만든 메서드를 사용해 보자!
         List<Post> myPost = postRepository.findMyPost();
         System.out.println(myPost);
     }
@@ -103,24 +102,24 @@ public class JpaTest {
 
 ```
 ...
-===== Post Custom Repository ====  
+===== Post Custom Repository ====
 2019-03-30 13:24:22.088  INFO 53165 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-Hibernate: 
-    insert 
+Hibernate:
+    insert
     into
         post
-        (title, id) 
+        (title, id)
     values
         (?, ?)
-Hibernate: 
+Hibernate:
     select
         post0_.id as id1_2_,
-        post0_.title as title2_2_ 
+        post0_.title as title2_2_
     from
         post post0_
 
 [Post(id=1, title=new post, comments=[])]
-... 
+...
 ```
 
 결과를 보면, 내가 만든 `findMyPost()`가 잘 동작하고 결과 까지 잘 가져오는 것을 확인 했다.
@@ -150,7 +149,7 @@ delete 메서드를 추가해보자.
 public class PostCustomRepositoryImpl implements PostCustomRepository<Post> {
 
 
-        ...  
+        ...
     @Override
     public void delete(Post post) {
         System.out.println(" ===== Custom Repository delete ======");
@@ -162,7 +161,7 @@ public class PostCustomRepositoryImpl implements PostCustomRepository<Post> {
 기존에 Generic 부분이 없었기 때문에, Post로 엔티티 타입을 설정한다.
 
 ```java
-public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRepository<Post> {   
+public interface PostRepository extends JpaRepository<Post, Long>, PostCustomRepository<Post> {
 }
 ```
 

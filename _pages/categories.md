@@ -1,8 +1,9 @@
 ---
-layout: post
-title: Categories🗂
+layout: page
+title: Categories
 permalink: /categories/
 ---
+
 <div id="archives">
   {% for category in site.categories %}
   <div class="archive-group">

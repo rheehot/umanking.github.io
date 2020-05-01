@@ -2,11 +2,11 @@
 layout: post
 title: "[Spring] @SpringBootAppllication 설명"
 date: 2019-04-12 09:11:00
-category: [Spring]
+categories: [spring]
 tags: [Spring]
-redirect_from: 
-- 2019/04/12/spring-application/
-- spring/spring-application/
+redirect_from:
+  - 2019/04/12/spring-application/
+  - spring/spring-application/
 ---
 
 > @SpringBootApplication 안에 들어있는 @ComponentScan, @EnableAutoConfiguration 을 알아보자.

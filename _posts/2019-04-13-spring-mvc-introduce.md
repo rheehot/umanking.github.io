@@ -2,18 +2,16 @@
 layout: post
 title: "[Spring] MVC 살펴보기"
 date: 2019-04-13 22:05:39
-categories: [Spring]
+categories: [spring]
 tags: [Spring]
-redirect_from: 
-- 2019/04/13/spring-mvc-introduce/
-- spring/spring-mvc-introduce/
-
+redirect_from:
+  - 2019/04/13/spring-mvc-introduce/
+  - spring/spring-mvc-introduce/
 ---
+
 > Spring Boot Web Mvc에 대해서 알아보자.
 
-
-
-SpringBoot Web MVC를 알기 위해서 `spring-boot-starter-web` 을 추가한다. 
+SpringBoot Web MVC를 알기 위해서 `spring-boot-starter-web` 을 추가한다.
 
 ```xml
 				<dependency>
@@ -22,9 +20,7 @@ SpringBoot Web MVC를 알기 위해서 `spring-boot-starter-web` 을 추가한�
         </dependency>
 ```
 
-
-
-/hello로 요청을 했을 때 hello를 리턴하는 HelloController를 만들고, 애플리케이션을 실행한다. 
+/hello로 요청을 했을 때 hello를 리턴하는 HelloController를 만들고, 애플리케이션을 실행한다.
 
 ```java
 @RestController
@@ -37,15 +33,11 @@ public class HelloController {
 }
 ```
 
-`localhost:8080/hello` 를 주소창에 입력하면, 본문에 hello라고 찍히는 것을 확인할 수 있다. 
+`localhost:8080/hello` 를 주소창에 입력하면, 본문에 hello라고 찍히는 것을 확인할 수 있다.
 
+### Web관련된 아무런 설정없이 이런게 가능했던 이유는 뭘까?
 
-
-### Web관련된 아무런 설정없이 이런게 가능했던 이유는 뭘까? 
-
-Root에 있는 클래스에 있는`@SpringBootApplication`안에 있는 `@EnableAutoConfiguration` 이 어노테이션을 통해서 autoconfigurer라이브러리 META-INF/spring.factories에 정의되어있는 수많은 설정파일들이 만들어진다. 특히나 WebMVC는 `WebMvcAutoConfiguration` 클래스를 통해서 자동 빈 설정을 한다.  아래는 해당 클래스 내용이다. viewResolver, RequestMapping ... 등 SpringMVC에 필요한 것들이 정의됨을 알 수 있다.
-
-
+Root에 있는 클래스에 있는`@SpringBootApplication`안에 있는 `@EnableAutoConfiguration` 이 어노테이션을 통해서 autoconfigurer라이브러리 META-INF/spring.factories에 정의되어있는 수많은 설정파일들이 만들어진다. 특히나 WebMVC는 `WebMvcAutoConfiguration` 클래스를 통해서 자동 빈 설정을 한다. 아래는 해당 클래스 내용이다. viewResolver, RequestMapping ... 등 SpringMVC에 필요한 것들이 정의됨을 알 수 있다.
 
 ```java
 package org.springframework.boot.autoconfigure.web.servlet;
@@ -594,13 +586,9 @@ public class WebMvcAutoConfiguration {
 
 ```
 
+이런 @SpringBootApplication 의 매직때문에 아무것도 하지않아도 간단한 코딩으로 WebApplication을 띄울 수 있었던 것이다.
 
-
-이런 @SpringBootApplication 의 매직때문에 아무것도 하지않아도 간단한 코딩으로 WebApplication을 띄울 수 있었던 것이다. 
-
-
-
-### Spring MVC를 확장하려면 ? 
+### Spring MVC를 확장하려면 ?
 
 @Configuration + WebMvcConfigurer
 
@@ -614,13 +602,11 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/m/")
                 .setCachePeriod(20);
     }
-  
+
   // 더 overrid해서 사용 가능함
 }
 ```
 
-
-
-### Spring MVC를 재정의 
+### Spring MVC를 재정의
 
 @Configuration + @EnableWebMvc

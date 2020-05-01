@@ -2,11 +2,11 @@
 layout: post
 title: "[Spring] Bean 등록"
 date: 2019-04-12 09:09:47
-categories: [Spring]
+categories: [spring]
 tags: [Spring]
-redirect_from: 
-- 2019/04/12/spring-bean/
-- spring/spring-bean/
+redirect_from:
+  - 2019/04/12/spring-bean/
+  - spring/spring-bean/
 ---
 
 > 스프링에서 빈을 등록하는 방법과 빈생성 전처리/후처리 하는 방법에 대해서 알아보자.

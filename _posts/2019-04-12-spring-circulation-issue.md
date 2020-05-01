@@ -2,18 +2,20 @@
 layout: post
 title: "[Spring] bean circular dependencies (빈 순환 참조)"
 date: 2019-04-12 09:10:25
-categories: [Spring]
+categories: [spring]
 tags: [Spring]
-redirect_from: 
-- 2019/04/12/spring-circulation-issue/
-- spring/spring-circulation-issue/
+redirect_from:
+  - 2019/04/12/spring-circulation-issue/
+  - spring/spring-circulation-issue/
 ---
+
 <!-- TOC -->
 
 - [빈 순환 참조가 발생하는 상황](#%eb%b9%88-%ec%88%9c%ed%99%98-%ec%b0%b8%ec%a1%b0%ea%b0%80-%eb%b0%9c%ec%83%9d%ed%95%98%eb%8a%94-%ec%83%81%ed%99%a9)
 - [해결 방법 1. @Lazy](#%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95-1-lazy)
 
 <!-- /TOC -->
+
 빈 순환 참조 예외가 난 경우, 어떻게 해결하는 지 알아 보자.
 빈 순환 참조라는 것은 생성자를 통해서 빈을 주입했을 때, Bean A -> Bean B -> Bean A ... 계속해서 순환 참조하는 것을 말한다.
 
@@ -92,4 +94,5 @@ public class CircularA {
     }
 }
 ```
+
 사실 여러 개의 블로그를 봤지만, **결국 빈 순환 참조가 난다는 것은 모델링 설계가 잘못되었음을 알려주는 것이라고 했다.** 그렇기 때문에 위에 방법들은 궁극적인 해결책 보다는 가벼운 임시 조치! 아니면 @Autowired, @Inject 어노테이션을 사용하는 것 뿐

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring RequestMapping 깊게 살펴보기
-categories: [Share]
+categories: [share]
 date: 2020-03-06 18:29 +0900
 ---
 
@@ -40,10 +40,10 @@ public class HomeController {
 정답은 동일하다. `localhost:8080` 루트로 들어오면 위의 각기 다르게 작성한 `@GetmMapping` 이지만 동일한 패스로 인지한다.
 다만 저 상태로 실행하면 Spring 에서는 Exception을 발생 시킨다.
 
-> org.springframework.beans.factory.BeanCreationException:Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource 
+> org.springframework.beans.factory.BeanCreationException:Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource
 > org/springframework/boot/autoconfigure/web/servlet
-> /WebMvcAutoConfiguration\$EnableWebMvcConfiguration.class : Invocation of init method failed; 
->   nested exception is java.lang.IllegalStateException: Ambiguous mapping.
+> /WebMvcAutoConfiguration\$EnableWebMvcConfiguration.class : Invocation of init method failed;
+> nested exception is java.lang.IllegalStateException: Ambiguous mapping.
 
 Ambiguous 매핑 이라고 한다. 개인적으로 공부할 때, 저런 exception은 너무 반갑다.
 계속 디버깅을 하다 보니
