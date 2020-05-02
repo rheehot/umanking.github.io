@@ -4,6 +4,8 @@ title: Java Comparable vs Compartor 사용방법
 categories: [java]
 tags: [java]
 date: 2020-03-10 08:18 +0900
+redirect_from:
+  - java/2020/03/09/java-comparable-comparator.html
 ---
 
 > 자바 Comparable과 Comparator에 대해서 알아보자.
