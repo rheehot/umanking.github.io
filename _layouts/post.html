@@ -30,7 +30,7 @@ layout: default
 
   {{ page.categories }} -->
   <a href="{{ site.url }}/categories/#{{ page.categories }}">
-    <div class="" style="display: left;">Categoires: {{ page.categories }}</div>
+    <div class="" style="display: right; margin-bottom: 20px;">#{{ page.categories }}</div>
   </a>
   <!-- <div class="" style="display: left;">tags: {{ page.tags }}</div> -->
 
@@ -38,6 +38,7 @@ layout: default
 </div>
 <div>
   {% include relatedPost.html %}
+  {% include utterance_comments.html %}
 </div>
 <div class="pagination">
   {% if page.next.url %}
