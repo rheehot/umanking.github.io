@@ -3,9 +3,10 @@ layout: post
 title: "[Spring] bean circular dependencies (빈 순환 참조)"
 date: 2019-04-12 09:10:25
 categories: [spring]
-tags: [Spring]
+tags: [spring]
 redirect_from:
   - 2019/04/12/spring-circulation-issue/
+  - spring/2019/04/12/spring-circulation-issue.html
   - spring/spring-circulation-issue/
 ---
 

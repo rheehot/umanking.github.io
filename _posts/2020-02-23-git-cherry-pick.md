@@ -3,6 +3,7 @@ layout: post
 title: "Git 체리픽(CherryPick)이란?"
 date: 2020-02-23 13:51 +0900
 categories: [git]
+tags: [git]
 ---
 
 ## 체리픽(Cherry Pick)?

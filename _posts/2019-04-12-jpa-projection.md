@@ -6,6 +6,7 @@ tags: [jpa]
 date: 2019-04-12 09:08:56
 redirect_from:
   - 2019/04/12/jpa-projection/
+  - jpa/2019/04/12/jpa-projection.html
   - jpa/jpa-projection
 ---
 

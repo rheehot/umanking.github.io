@@ -4,16 +4,17 @@ title: "[이펙티브 자바 3판] 아이템1.생성자 대신 정적 팩터리 
 description: 이펙티브 자바, 아이템1.생성자 대신 정적 팩터리 메서드를 고려하라
 date: 2020-02-18 20:03 +0900
 categories: [effective java]
+tags: [effective java]
 ---
 
 ![effective java image](https://user-images.githubusercontent.com/28615416/75598228-81ca1c00-5add-11ea-9319-e949af4e07cd.png){:.postImage}
 
 <!-- TOC -->
 
-- [정적 팩터리 메서드의 장점](#정적-팩터리-메서드의-장점)
-- [정적 팩터리 메서드의 단점](#정적-팩터리-메서드의-단점)
-- [흔히 사용한는 정적 팩터리 명명 방식](#흔히-사용한는-정적-팩터리-명명-방식)
-- [핵심 정리](#핵심-정리)
+- [정적 팩터리 메서드의 장점](#%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EC%9E%A5%EC%A0%90)
+- [정적 팩터리 메서드의 단점](#%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%8B%A8%EC%A0%90)
+- [흔히 사용한는 정적 팩터리 명명 방식](#%ED%9D%94%ED%9E%88-%EC%82%AC%EC%9A%A9%ED%95%9C%EB%8A%94-%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%AA%85%EB%AA%85-%EB%B0%A9%EC%8B%9D)
+- [핵심 정리](#%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC)
 
 <!-- /TOC -->
 

@@ -3,6 +3,7 @@ layout: post
 title: "JUnit5 사용기"
 date: 2020-02-15 20:51 +0900
 categories: [spring]
+tags: [spring]
 ---
 
 <!-- TOC -->

@@ -2,6 +2,7 @@
 layout: post
 title: URLSearchParam (URL주소로 부터 파라미터 값 얻어오기)
 categories: [share]
+tags: [share]
 date: 2020-03-06 09:46 +0900
 ---
 

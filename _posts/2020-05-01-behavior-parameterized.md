@@ -3,7 +3,7 @@ layout: post
 title: "Modern Java in Action - #2 동작파리미터화 코드 전달하기"
 date: 2020-05-01 15:04 +0900
 categories: [java]
-tags: [Java, ModernJavaInAction]
+tags: [java]
 published: false
 ---
 

@@ -3,9 +3,10 @@ layout: post
 title: "[Spring] 스프링 부트 특징 3가지"
 date: 2019-04-12 09:11:26
 categories: [spring]
-tags: [Spring]
+tags: [spring]
 redirect_from:
   - 2019/04/12/spring-concept/
+  - spring/2019/04/12/spring-concept.html
   - spring/spring-concept/
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "IntelliJ, Gradle 테스트가 느릴때"
 categories: [share]
+tags: [share]
 date: 2020-03-07 11:28 +0900
 ---
 

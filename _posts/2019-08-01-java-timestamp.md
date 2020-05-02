@@ -3,8 +3,7 @@ layout: post
 title: "[Java]  TimeStamp, LocalDateTime, Instant 비교"
 categories: [java]
 date: 2019-08-01 16:51:29
-tags:
-  - Java
+tags: [java]
 redirect_from:
   - 2019/08/01/java-timestamp/
   - java/java-timestamp/

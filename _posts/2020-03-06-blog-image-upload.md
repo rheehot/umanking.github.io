@@ -2,6 +2,7 @@
 layout: post
 title: Github 페이지 이미지 업로드 하는 꼼수
 categories: [share]
+tags: [share]
 date: 2020-03-06 12:01 +0900
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Java 11 New Features
 date: 2019-07-25 14:57:43
 categories: [java]
-tags: [Java]
+tags: [java]
 redirect_from:
   - 2019/07/25/java-jdk11-feature/
   - java/java-jdk11-feature/

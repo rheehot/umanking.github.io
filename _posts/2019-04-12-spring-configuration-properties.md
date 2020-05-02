@@ -3,9 +3,10 @@ layout: post
 title: "[Spring] application.properties값 → 클래스로 관리하는 방법"
 date: 2019-04-13 22:04:37
 categories: [spring]
-tags: [Spring]
+tags: [spring]
 redirect_from:
   - 2019/04/12/spring-configuration-properties/
+  - spring/2019/04/12/spring-configuration-properties.html
   - spring/spring-configuration-properties/
 ---
 

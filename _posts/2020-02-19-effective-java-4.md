@@ -3,6 +3,7 @@ layout: post
 title: "[이펙티브 자바 3판] 아이템4.인스턴스화를 막으려거든 private 생성자를 사용하라"
 description: 이펙티브 자바, 아이템4.인스턴스화를 막으려거든 private 생성자를 사용하라
 categories: [effective java]
+tags: [effective java]
 date: 2020-02-19 20:43 +0900
 ---
 

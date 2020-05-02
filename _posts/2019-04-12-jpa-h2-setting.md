@@ -5,6 +5,7 @@ categories: [jpa]
 tags: [jpa]
 redirect_from:
   - 2019/04/12/jpa-h2-setting/
+  - /jpa/2019/04/12/jpa-h2-setting.html
   - jpa/jpa-h2-setting/
 date: 2019-04-12 09:05:02
 ---

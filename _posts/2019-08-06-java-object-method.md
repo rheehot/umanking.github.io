@@ -3,8 +3,7 @@ layout: post
 title: "[Java]  wait와 notify메서드"
 categories: [java]
 date: 2019-08-06 17:31:34
-tags:
-  - Java
+tags: [java]
 redirect_from:
   - 2019/08/06/java-object-method/
   - java/java-object-method/

@@ -3,8 +3,7 @@ layout: post
 title: "[Java] Exception"
 categories: [java]
 date: 2019-08-06 11:07:14
-tags:
-  - Java
+tags: [java]
 redirect_from:
   - 2019/08/06/java-checked-unchecked-exception/
   - java/java-checked-unchecked-exception/

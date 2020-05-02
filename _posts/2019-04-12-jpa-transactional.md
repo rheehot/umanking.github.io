@@ -6,6 +6,7 @@ tags: [JPA]
 date: 2019-04-12 09:09:13
 redirect_from:
   - 2019/04/12/jpa-transactional/
+  - jpa/2019/04/12/jpa-transactional.html
   - jpa/jpa-transactional/
 ---
 

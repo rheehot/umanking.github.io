@@ -3,9 +3,10 @@ layout: post
 title: "[Spring] Bean 등록"
 date: 2019-04-12 09:09:47
 categories: [spring]
-tags: [Spring]
+tags: [spring]
 redirect_from:
   - 2019/04/12/spring-bean/
+  - spring/2019/04/12/spring-bean.html
   - spring/spring-bean/
 ---
 

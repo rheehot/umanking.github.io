@@ -3,6 +3,7 @@ layout: post
 title: "[이펙티브 자바 3판] 아이템5.자원을 직접 명시하지 말고 의존 객체 주입을 사용하라"
 description: 이펙티브 자바, 아이템5.자원을 직접 명시하지 말고 의존 객체 주입을 사용하라
 categories: [effective java]
+tags: [effective java]
 date: 2020-02-21 20:52 +0900
 ---
 

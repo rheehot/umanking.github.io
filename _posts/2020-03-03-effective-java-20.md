@@ -2,6 +2,7 @@
 layout: post
 title: "[이펙티브 자바 3판] 아이템20.추상 클래스보다는 인터페이스를 우선하라"
 categories: [effective java]
+tags: [effective java]
 date: 2020-03-03 19:59 +0900
 ---
 

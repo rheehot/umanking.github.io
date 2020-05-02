@@ -5,6 +5,7 @@ categories: [jpa]
 tags: [jpa]
 redirect_from:
   - 2019/04/12/jpa-query-method-lookup-stratege/
+  - jpa/2019/04/12/jpa-query-method-lookup-stratege.html
   - jpa/jpa-query-method-lookup-stratege/
 date: 2019-04-12 09:07:40
 ---

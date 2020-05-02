@@ -3,8 +3,7 @@ layout: post
 title: "[Java] ThreadLocal"
 categories: [java]
 date: 2019-07-26 11:58:39
-tags:
-  - Java
+tags: [java]
 redirect_from:
   - 2019/07/26/java-thread-local/
   - java/java-thread-local/

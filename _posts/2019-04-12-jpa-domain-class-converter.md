@@ -5,6 +5,7 @@ categories: [jpa]
 tags: [jpa]
 redirect_from:
   - 2019/04/12/jpa-domain-class-converter/
+  - jpa/2019/04/12/jpa-domain-class-converter.html
   - jpa/jpa-domain-class-converter/
 date: 2019-04-12 09:04:25
 ---

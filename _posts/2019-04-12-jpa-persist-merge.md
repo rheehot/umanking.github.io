@@ -5,7 +5,8 @@ date: 2019-04-12 09:08:33
 categories: [jpa]
 tags: [JPA]
 redirect_from:
-  # - 2019/04/12/jpa-persist-merge/
+  - 2019/04/12/jpa-persist-merge/
+  - jpa/2019/04/12/jpa-persist-merge.html
   - jpa/jpa-persist-merge/
 ---
 

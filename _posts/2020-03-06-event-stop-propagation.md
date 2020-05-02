@@ -2,6 +2,7 @@
 layout: post
 title: 이벤트 preventDefault와 stopPropagation의 차이
 categories: [share]
+tags: [share]
 date: 2020-03-06 09:57 +0900
 ---
 

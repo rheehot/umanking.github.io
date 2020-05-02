@@ -2,6 +2,7 @@
 layout: post
 title: IntelliJ, 매크로 활용하기(Feat.Thymeleaf 수정된거 즉각 반영하기)
 categories: [share]
+tags: [share]
 date: 2020-03-06 11:02 +0900
 ---
 

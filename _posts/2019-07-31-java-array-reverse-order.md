@@ -3,8 +3,7 @@ layout: post
 title: "[Java]  배열 reverseOrder 하는 방법"
 categories: [java]
 date: 2019-07-31 12:28:33
-tags:
-  - Java
+tags: [java]
 redirect_from:
   - 2019/07/31/java-array-reverse-order/
   - java/java-array-reverse-order/

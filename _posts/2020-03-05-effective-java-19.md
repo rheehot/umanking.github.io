@@ -2,6 +2,7 @@
 layout: post
 title: "[이펙티브 자바 3판] 아이템19.상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라"
 categories: [effective java]
+tags: [effective java]
 date: 2020-03-05 08:03 +0900
 ---
 

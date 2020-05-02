@@ -3,6 +3,7 @@ layout: post
 title: "IntelliJ에서 Github Remote 레포지토리 만들기"
 date: 2019-11-16 13:20 +0900
 categories: [intellij]
+tags: [intellij]
 ---
 
 오늘은 IntelliJ 내부에서 **Github Repository를 직접 만들고**, 커밋하고 푸쉬 하는 방법에 대해서 알아보자.
