@@ -1,6 +1,6 @@
 # Site settings
 title: 📚책읽는 개발자 🧑‍💻
-description: "Java, Spring를 이용해서 BackEnd 개발을 주로 하고 Java, Spring Framework에 대한 블로그"
+description: "Java, Spring 을 다루는 주니어 백엔드 개발자입니다. 부족하지만 하나씩 정리하고 있습니다!"
 baseurl: ""
 url: "https://umanking.github.io"
 
@@ -9,7 +9,7 @@ google_analytics: UA-130245279-5
 
 # Author
 author:
-  name: umanking
+  name: andrew
   url: https://umanking.github.io
   email: umanking@gmail.com
 

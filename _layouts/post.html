@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="post">
-  <!--
+
   <div class="post-info">
-     <span style="font-style: italic;">Written by</span>
+    <span style="font-style: italic;">Written by</span>
     {% if page.author %}
     {{ page.author }}
     {% else %}
@@ -12,12 +12,12 @@ layout: default
     {% endif %}
 
     {% if page.date %}
-    <br> 
+    <br>
     <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
-    
+
   </div>
--->
+
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
   <!-- {% assign categories = page.categories | sort  | split: ',' %}

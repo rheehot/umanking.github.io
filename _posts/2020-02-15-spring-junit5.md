@@ -103,8 +103,6 @@ Junit4에서는 메서드에 한글 이름을 넣어서 테스트 하는 경우�
 역시나 @ParameterizedTest와 `assertThatExceptionOfType`을 활용한다.
 발생할 exception클래스를 적고 누구에 의해서 던져지는지(isThrownBy)를 명시한다. 다만 해당 메서드의 인자는 ThrowingCallable 이기 때문에 람다형태로 작성해 준다.
 
-![설명](/assets/images/junit-test2.png)
-
 ## 정리
 
 아주 간단한 Junit 테스트 use case를 작성했다. 더 많이 사용하고, 고민 하고 다시 포스팅을 해야 겠다.
