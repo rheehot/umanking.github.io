@@ -6,6 +6,7 @@ categories: [spring]
 tags: [spring]
 redirect_from:
   - spring/spring-fileupload/
+  - spring/2020/01/02/spring-fileupload.html
 ---
 
 ## 개요
