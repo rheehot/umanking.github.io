@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Modern Java In Action - #9. 람다로 객체지향 디자인 패턴 리팩토링하기"
+title: "Modern Java In Action #9. 람다로 객체지향 디자인 패턴 리팩토링하기"
 date: 2020-05-04 13:57 +0900
 categories: [java]
 tags: [modern java in action]
