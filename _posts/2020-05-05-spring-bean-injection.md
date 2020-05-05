@@ -16,7 +16,7 @@ tags: [spring]
 - setter 주입
 - 생성자 주입
 
-## 필드 주입
+## 1) 필드 주입
 
 ```java
 @Service
@@ -29,7 +29,7 @@ public class MemberService {
 
 필드 주입은 주입하려는 빈을 필드에 설정하고, `@Autowired` 어노테이션을 단다. 그러면 Spring에서 해당 빈을 외부에서 생성해서 주입(inject)해준다. 단점은 `MemberService` 를 테스트할 때 필드로 주입된 memberRepository가 강하게~~~ 결합되어 있어서(의존도가 있음) 테스트 할때 어려움이 있다.
 
-## Setter주입
+## 2) Setter주입
 
 setter 주입은 어떨까?
 
@@ -46,7 +46,7 @@ public class MemberService {
 
 setter 주입은 필드 주입에 비해서, setter를 통해서 MemberRepository 말고도 다른 MockMemberRepository와 같은 목객체를 setter로 주입해서 테스트를 할 수 있다. 하지만, 런타임에 리플렉션을 통해서 누군가 해당 레포지토리를 변경할 수 있다는 단점이 있다.
 
-## 생성자 주입
+## 3) 생성자 주입
 
 생성자 주입은 어떨까?
 
