@@ -2,7 +2,6 @@
 layout: default
 ---
 <div class="post">
-
   <div class="post-info">
     <span style="font-style: italic;">Written by</span>
     {% if page.author %}
@@ -17,7 +16,6 @@ layout: default
     {% endif %}
 
   </div>
-  {% include ad_coupang1.html %}
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
   {% include ad_coupang1.html %}
@@ -28,7 +26,6 @@ layout: default
   {{ category | capitalize }}
   {% endfor %}
   {% endcapture %}
-
 
   {{ page.categories }} -->
   <a href="{{ site.url }}/categories/#{{ page.categories }}">
