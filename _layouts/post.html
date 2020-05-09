@@ -21,6 +21,7 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-line"></div>
   {% include ad_coupang1.html %}
+  {% include ad.html %}
   <!-- {% assign categories = page.categories | sort  | split: ',' %}
   {% capture titlecase %}
   {% for category in categories %}
@@ -38,10 +39,10 @@ layout: default
   {{ content | toc }}
 </div>
 <div>
+  {% include ad.html %}
   {% include ad_coupang.html %}
   {% include relatedPost.html %}
   {% include utterance_comments.html %}
-
 </div>
 <div class="pagination">
   {% if page.next.url %}
