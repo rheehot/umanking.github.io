@@ -3,7 +3,6 @@ layout: page
 title: Tag Cloud
 permalink: /tags/
 ---
-
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
 <span class="site-tag">
