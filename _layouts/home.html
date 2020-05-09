@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="catalogue">
-
   {% include ad_coupang1.html %}
   {% for post in paginator.posts %}
   <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
@@ -25,9 +24,7 @@ layout: default
   </a>
   {% endfor %}
   {% include ad_coupang.html %}
-  <div>
-    {% include ad.html %}
-  </div>
+  {% include ad_google_horizental.html %}
 </div>
 
 <div class="pagination">
@@ -37,6 +34,5 @@ layout: default
   {% if paginator.next_page %}
   <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
   {% endif %}
-
   <span>{{ paginator.page }}</span>
 </div>
