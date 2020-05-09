@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="catalogue">
-  {% include ad_coupang.html %}
+
   {% include ad_coupang1.html %}
   {% for post in paginator.posts %}
   <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
@@ -24,6 +24,7 @@ layout: default
     </div>
   </a>
   {% endfor %}
+  {% include ad_coupang.html %}
   {% include ad.html %}
 </div>
 
