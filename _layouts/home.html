@@ -4,6 +4,7 @@ layout: default
 
 <div class="catalogue">
   {% include ad_coupang1.html %}
+
   {% for post in paginator.posts %}
   <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
     <div>
@@ -23,8 +24,9 @@ layout: default
     </div>
   </a>
   {% endfor %}
+
+
   {% include ad_coupang.html %}
-  {% include ad_google_horizental.html %}
 </div>
 
 <div class="pagination">
