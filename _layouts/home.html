@@ -3,33 +3,36 @@ layout: default
 ---
 
 <div class="catalogue">
+  {% include ad_coupang.html %}
+  {% include ad_coupang1.html %}
   {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <span class="catalogue-type">{{ post.categories }}
-         | <small datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</small>
-        </span>
-        
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
-        <!-- <p class="catalogue-sub">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+    <div>
+      <span class="catalogue-type">{{ post.categories }}
+        | <small datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</small>
+      </span>
+
+      <h1 class="catalogue-title">{{ post.title }}</h1>
+      <div class="catalogue-line"></div>
+      <!-- <p class="catalogue-sub">
           {{ post.description }}
         </p>  -->
-        <p class="catalogue-text">
-          {{ post.content | strip_html | truncatewords: 30 }}
-        </p>
+      <p class="catalogue-text">
+        {{ post.content | strip_html | truncatewords: 30 }}
+      </p>
 
-      </div>
-    </a>
+    </div>
+  </a>
   {% endfor %}
+  {% include ad.html %}
 </div>
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
   {% endif %}
 
   <span>{{ paginator.page }}</span>
