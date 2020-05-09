@@ -3,7 +3,10 @@ layout: page
 title: "About"
 permalink: /about/
 ---
+<div>
 {% include ad_coupang1.html %}
+</div>
+
 ## 자기소개
 
 안녕하세요.🙋‍♂ 💻☕️🎤
@@ -33,4 +36,6 @@ permalink: /about/
 - <umanking@gmail.com>💌
 - [GitHub](https://github.com/umanking)
 
-{% include ad_coupang.html %}
+<div>
+{% include ad.html %}
+</div>
