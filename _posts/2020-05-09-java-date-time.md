@@ -81,7 +81,7 @@ int month = date.getMonthValue();
 int dayOfMonth = date.getDayOfMonth();
 ```
 
-마찬가지로 LocalTime을 통해서 14:23:30와 같은 시간을 표현할 수 있다. 정적 메서드 of로 LocalTime인스턴스를 만들 수 있다.
+마찬가지로 LocalTime을 통해서 14:23:30와 같은 시간을 표현할 수 있다. 정적 메서드 of로 LocalTime인스턴스를 만들 수 있다.!
 
 ```java
 LocalTime time = LocalTime.of(14,23,30);
