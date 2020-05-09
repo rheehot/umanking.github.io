@@ -4,12 +4,15 @@ title: "Java8 새로운 날짜와 시간 API 정리"
 date: 2020-05-09 12:19 +0900
 categories: [java]
 tags: [modern java in action]
+toc: true
 ---
 
 > - 자바의 날짜, 시간 관련된 히스토리, 8버전에서 추가된 새로운 날짜,시간 API 기본 사용법을 알아본다.
 > - 기간을 표현하는 Duration, Period알아본다.
 > - 날짜를 변경하고, 파싱, 포매팅을 알아본다.
 > - ZoneId (다양한 시간대)를 알아본다.
+
+# 자바 날짜, 시간 History
 
 ## 자바 1.0 Date 클래스
 
@@ -37,6 +40,8 @@ DateFormat도 문제가 있다. 스레드에 안전하지 않다. 즉, 두 스�
 ## 자바 1.8 새로운 날짜 시간 등장!
 
 부실한 날짜와 시간 라이브러리 때문에 많은 개발자는 [joda-time](https://www.joda.org/joda-time/) 같은 서드파티 날짜와 시간 라이브러리를 사용했다. 오라클은 좀 더 훌륭한 날짜와 시간 API를 제공하기로 정했다. 결국 자바 8에서는 Joda-Time의 많은 기능을 java.time 패키지로 추가했다.
+
+# 자바 8 새로운 날짜와 시간 API
 
 ## LocalDate와 LocalTime 사용
 
@@ -145,7 +150,7 @@ java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: DayOfMon
 
 Instant에서는 Duration과 Period 클래스를 함께 활용할 수 있다.
 
-## Duration과 Period 정의
+##Duration과 Period 정의
 
 지금까지 살펴본 모든 클래스는 Temporal 인터페이스를 구현하는데, **<u>Temporal 인터페이스는 특정 시간을 모델링하는 객체의 값을 어떻게 읽고 조작할지 정의한다.</u>** 지금까지 다양한 Temporal 인스턴스를 만드는 방법을 살펴봤다.
 
@@ -218,7 +223,7 @@ public interface TemporalAdjuster {
 }
 ```
 
-## 커스텀 TemporalAdjusters 구현하기
+### 커스텀 TemporalAdjusters 구현하기
 
 TemporalAdjusters 인터페이스를 구현하는 NextWorkingDay 클래스를 구현한다. 이 클래스는 날짜를 하루씩 다음날로 바꾸는데, 토요일 일요일은 건너뛴다.
 
