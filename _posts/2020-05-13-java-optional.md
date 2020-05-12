@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java - null 대신 Optional
+title: Java8 null 대신 Optional
 date: 2020-05-13 08:44 +0900
 categories: [java] 
 tags: [modern java in action]
