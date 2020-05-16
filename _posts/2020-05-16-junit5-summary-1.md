@@ -6,6 +6,7 @@ categories: [junit]
 tags: [junit]
 toc: true
 ---
+![](https://miro.medium.com/max/881/1*J8sjpKQJswCKiPUYVefbgQ.jpeg)
 > 해당 포스팅은 인프런의 백기선님 강의를 기반으로 요약정리한 내용입니다.!
 
 

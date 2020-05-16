@@ -30,23 +30,23 @@ toc: true
 자바8에서는 디폴트 메서드가 추가되었으므로 같은 시그니처를 갖는 디폴트 메서드를 상속받는 상황이 생길 수 있다. 이런 상황에서 어떤 인터페이스의 디폴트 메서드를 사용하게 될까? 
 
 ```java
-	public interface A {
-        default void hello() {
-            System.out.println("hello from a");
-        }
+public interface A {
+    default void hello() {
+        System.out.println("hello from a");
     }
+}
 
-    public interface B {
-        default void hello() {
-            System.out.println("hello from b ");
-        }
+public interface B {
+    default void hello() {
+        System.out.println("hello from b ");
     }
+}
 
-    static class C implements A, B {
-        public static void main(String[] args) {
-            new C().hello();
-        }
+static class C implements A, B {
+    public static void main(String[] args) {
+        new C().hello();
     }
+}
 ```
 
 ### 알아야할 세가지 해결 규칙
