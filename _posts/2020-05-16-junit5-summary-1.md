@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JUnit5 요약 #1  (By Inflearn) "
+title: "JUnit5 요약 #1"
 date: 2020-05-16 11:27 +0900
 categories: [junit] 
 tags: [junit]
