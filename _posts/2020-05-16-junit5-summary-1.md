@@ -324,3 +324,20 @@ static class StudyAggregator implements ArgumentsAggregator {
 }
 ```
 
+
+## 테스트 순서 
+
+기본 Junit Test는 메서드 실행당 새로운 인스턴스를 만든다. Junit5 에서는 Class당 테스트 인스턴스를 만들 수 있도록 해당 기능을 제공한다. 다음과 같이 클래스 레벨에 작성할 수 있다.
+
+```java
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+```
+
+테스트 순서는 Junit에서 구현한 알고리즘에 따라서 순서가 정해진다. 순서를 명확히 해야 할때는 클래스 레벨에 @TestMethodOrder의 MethodOrderer를 어떤걸로 할지 넘겨준다. 실제 메서드 별로 `@Order` 애노테이션을 달아서 순서를 지정해줄 수 있다.
+
+```java
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+```
+
+> ❗️주의사항, `@Order` 애노테이션은 스프링에서 제공하는 것도 있다. 이것은 빈의 순서를 정의 하는 것이므로, 반드시 junit에서 제공하는 `@Order`어노테이션을 사용해야 한다! 
+
