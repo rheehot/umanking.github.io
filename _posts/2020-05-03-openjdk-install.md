@@ -2,7 +2,7 @@
 layout: post
 title: "OpenJDK 11 install on mac"
 date: 2020-05-03 16:15 +0900
-categories: [java]
+categories: [Java]
 tags: [java, tip]
 ---
 

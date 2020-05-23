@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[JPA] 엔티티 일부 데이터만 조회하는 Projection"
-categories: [jpa]
-tags: [jpa]
+categories: [JPA]
+tags: [JPA]
 date: 2019-04-12 09:08:56
 redirect_from:
   - 2019/04/12/jpa-projection/

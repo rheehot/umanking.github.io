@@ -2,7 +2,7 @@
 layout: post
 title: "Java8 디폴트 메서드"
 date: 2020-05-10 13:00 +0900
-categories: [java] 
+categories: [Java] 
 tags: [modern java in action]
 toc: true
 ---

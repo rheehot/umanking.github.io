@@ -2,8 +2,8 @@
 layout: post
 title: "[Spring] 서블릿에 대해서 알아보자"
 date: 2019-04-17 09:37:42
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 tages: [spring]
 redirect_from:
   - 2019/04/17/spring-servlet-introduce/

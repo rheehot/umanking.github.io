@@ -2,8 +2,8 @@
 layout: post
 title: "[Spring] MVC 살펴보기"
 date: 2019-04-13 22:05:39
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - spring/2019/04/13/spring-mvc-introduce.html
   - spring/spring-mvc-introduce/

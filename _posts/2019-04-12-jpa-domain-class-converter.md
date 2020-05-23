@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[JPA] 도메인 클래스 컨버터란?"
-categories: [jpa]
-tags: [jpa]
+categories: [JPA]
+tags: [JPA]
 redirect_from:
   - 2019/04/12/jpa-domain-class-converter/
   - jpa/2019/04/12/jpa-domain-class-converter.html

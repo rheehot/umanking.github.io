@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[JPA] QueryDSL 설정방법"
-categories: [jpa]
-tags: [jpa]
+categories: [JPA]
+tags: [JPA]
 redirect_from:
   - 2019/04/12/jpa-querydsl/
   - jpa/2019/04/12/jpa-querydsl.html

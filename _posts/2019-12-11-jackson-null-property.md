@@ -2,8 +2,8 @@
 layout: post
 title: Jackson, null 필드 무시하기
 date: 2019-12-11 22:25 +0900
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - /2019/12/11/jackson-null-property/
   - spring/jackson-null-property/

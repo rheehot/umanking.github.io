@@ -2,7 +2,7 @@
 layout: post
 title: Java8 null 대신 Optional
 date: 2020-05-13 08:44 +0900
-categories: [java] 
+categories: [Java] 
 tags: [modern java in action]
 toc: true
 ---

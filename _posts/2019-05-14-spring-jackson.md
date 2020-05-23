@@ -2,8 +2,8 @@
 layout: post
 title: "Jackson 어노테이션 사용"
 date: 2019-05-14 22:30:23
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - 2019/05/14/spring-jackson/
   - spring/2019/05/14/spring-jackson.html

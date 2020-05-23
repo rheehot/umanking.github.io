@@ -2,8 +2,8 @@
 layout: post
 title: "Thymeleaf Collection 정보 화면에 렌더링하기"
 date: 2020-01-19 14:20 +0900
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 ---
 
 > 모든 소스코드는 **[여기](https://github.com/umanking/blog-code-workspace)**에서 확인 가능합니다.  

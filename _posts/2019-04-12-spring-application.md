@@ -2,8 +2,8 @@
 layout: post
 title: "[Spring] @SpringBootAppllication 설명"
 date: 2019-04-12 09:11:00
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - 2019/04/12/spring-application/
   - spring/2019/04/12/spring-application.html

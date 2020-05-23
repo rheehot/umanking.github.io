@@ -15,11 +15,24 @@ layout: default
     <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
   </div> -->
-  <h1 class="post-title">{{ page.title }}</h1>
-  <!-- <div class="post-line"></div> -->
-  {% include ad_coupang1.html %}
-  {% include ad.html %}
-  <!-- {% assign categories = page.categories | sort  | split: ',' %}
+  <div class="post-all">
+    <div class="post-tag">
+      {% assign categories = page.categories | sort  | split: ',' %}
+      {% capture titlecase %}
+      {% for category in categories %}
+      {{ category | capitalize }}
+      {% endfor %}
+      {% endcapture %}
+      {{ page.categories }}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-subtitle">{{ page.subtitle }}</div>
+  </div>
+</div>
+<!-- <div class="post-line"></div> -->
+{% include ad_coupang1.html %}
+{% include ad.html %}
+<!-- {% assign categories = page.categories | sort  | split: ',' %}
   {% capture titlecase %}
   {% for category in categories %}
   {{ category | capitalize }}
@@ -27,11 +40,11 @@ layout: default
   {% endcapture %}
 
   {{ page.categories }} -->
-  <!-- <a href="{{ site.url }}/categories/#{{ page.categories }}">
+<!-- <a href="{{ site.url }}/categories/#{{ page.categories }}">
     <div class="" style="display: right; margin-bottom: 20px;">#{{ page.categories }}</div>
   </a> -->
-  <!-- <div class="" style="display: left;">tags: {{ page.tags }}</div> -->
-  {{ content | toc }}
+<!-- <div class="" style="display: left;">tags: {{ page.tags }}</div> -->
+{{ content | toc }}
 </div>
 <div>
   {% include ad.html %}

@@ -2,8 +2,8 @@
 layout: post
 title: "[Spring] MultipartFile을 이용한 파일 업로드"
 date: 2020-01-02 23:42 +0900
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - spring/spring-fileupload/
   - spring/2020/01/02/spring-fileupload.html

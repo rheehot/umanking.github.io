@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[JPA] Custom Repository 만들기"
-categories: [jpa]
-tags: [jpa]
+categories: [JPA]
+tags: [JPA]
 redirect_from:
   - 2019/04/12/jpa-custom-repository/
   - jpa/2019/04/12/jpa-custom-repository.html

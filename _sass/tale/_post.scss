@@ -12,12 +12,31 @@
     }
   }
 
+  &-all {
+    padding-bottom: 60px;
+  }
+
+  &-subtitle {
+    color: #90949a;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+
   &-title {
     color: $default-shade;
     font-family: $sans-serif;
     font-size: 2rem;
     margin: 1rem 0;
-    text-align: center;
+    text-align: left;
+  }
+
+  &-tag {
+    color: #8565fc;
+    font-family: $sans-serif;
+    font-size: 18px;
+    font-weight: 800;
   }
 
   &-line {

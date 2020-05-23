@@ -2,8 +2,8 @@
 layout: post
 title: "[Java] 클래스로더란?"
 date: 2019-06-25 10:32:52
-categories: [java]
-tags: [java]
+categories: [Java]
+tags: [Java]
 redirect_from:
   - 2019/06/25/java-class-loader/
 ---

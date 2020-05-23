@@ -2,8 +2,8 @@
 layout: post
 title: "[JPA] 엔티티 설계시 주의사항들"
 date: 2020-05-05 15:36 +0900
-categories: [jpa]
-tags: [jpa활용]
+categories: [JPA]
+tags: [JPA]
 ---
 
 > 엔티티 설계시 주의사항? 고려사항들을 알아본다. 관련내용은 김영한님의 인프런 강좌내용을 발췌했습니다!

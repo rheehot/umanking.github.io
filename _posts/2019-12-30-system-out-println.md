@@ -2,8 +2,8 @@
 layout: post
 title: "[Java] System.out.println을 사용하면 안되는 이유"
 date: 2019-12-30 20:43 +0900
-categories: [java]
-tags: [java]
+categories: [Java]
+tags: [Java]
 ---
 
 # 개요

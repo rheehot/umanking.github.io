@@ -2,8 +2,8 @@
 layout: post
 title: "[Spring] 모델 검증(validation)"
 date: 2019-12-12 21:19 +0900
-categories: [spring]
-tags: [spring]
+categories: [Spring]
+tags: [Spring]
 redirect_from:
   - 2019/12/12/spring-validation/
   - spring/spring-validation/

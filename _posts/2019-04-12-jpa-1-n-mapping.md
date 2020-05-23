@@ -6,8 +6,8 @@ redirect_from:
   - 2019/04/12/jpa-1-n-mapping/
   - jpa/2019/04/12/jpa-1-n-mapping.html
   - jpa/jpa-1-n-mapping/
-categories: [jpa]
-tags: [jpa]
+categories: [JPA]
+tags: [JPA]
 ---
 
 # 1.들어가며
