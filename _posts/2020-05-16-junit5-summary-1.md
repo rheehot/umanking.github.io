@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "JUnit5 요약 #1"
+subtitle: "JUnit5 사용하기"
 date: 2020-05-16 11:27 +0900
-categories: [junit] 
-tags: [junit]
-toc: true
+categories: [JUnit] 
+tags: [JUnit]
 ---
-![](https://miro.medium.com/max/881/1*J8sjpKQJswCKiPUYVefbgQ.jpeg)
+<!-- ![](https://miro.medium.com/max/881/1*J8sjpKQJswCKiPUYVefbgQ.jpeg) -->
 > 해당 포스팅은 인프런의 백기선님 강의를 기반으로 요약정리한 내용입니다.!
 
 
-## JUnit 개요
+## JUnit5 개요
 
 -   junit platform : launcher 같은 역할
 -   vintage: junit3,4 구현체
@@ -20,8 +20,8 @@ toc: true
 
 ## Junit5 사용하기 
 
--   spring boot 2.2.x 버전대를 이용하면 junit5가 자동으로 들어간다. 
--   spring boot 를 사용하지 않는다면 다음과 같이 의존성을 추가한다.
+-   Spring Boot 2.2.x 버전대 이상을 사용하면 JUnit5 모듈이 자동으로 들어간다.
+-   Spring Boot를 사용하지 않는다면 다음과 같이 의존성을 추가한다.
 
     ```xml
     <dependency>
@@ -32,9 +32,7 @@ toc: true
     </dependency>
     ```
 
-
-
-## Junit 테스트 이름
+## Junit 테스트명 DisplayName
 
 `@DiaplayName("주문 성공 테스트")`  와 같은 형태로 junit 실행후 하단에 표시되는 report 에 한글로 표시된다. 더이상 메서드 이름을 한글로 작성하지 않아도 된다. (junit5) 부터는
 

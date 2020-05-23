@@ -4,7 +4,6 @@ title: Java8 null 대신 Optional
 date: 2020-05-13 08:44 +0900
 categories: [Java] 
 tags: [modern java in action]
-toc: true
 ---
 > null대신 Optional을 사용하는 이유에 대해서 알아보자
 

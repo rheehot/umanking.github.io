@@ -2,9 +2,8 @@
 layout: post
 title: "JUnit5 요약 #2"
 date: 2020-05-17 12:06 +0900
-categories: [junit] 
-tags: [junit]
-toc: true
+categories: [JUnit] 
+tags: [JUnit]
 ---
 
 

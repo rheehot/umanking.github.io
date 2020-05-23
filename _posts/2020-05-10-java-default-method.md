@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "Java8 디폴트 메서드"
+subtitle: "자바8 디폴트 메서드에 대해서 알아보자."
 date: 2020-05-10 13:00 +0900
 categories: [Java] 
 tags: [modern java in action]
-toc: true
+toc: false
 ---
-
->   자바8부터 추가된 디폴트 메서드에 대해서 알아보자. 
 
 ## 디폴트 메서드를 사용하는 이유는 뭘까? 
 

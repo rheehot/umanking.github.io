@@ -13,7 +13,7 @@
   }
 
   &-all {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
 
   &-subtitle {
@@ -101,11 +101,8 @@
   //   background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff),linear-gradient(#8565fc, #8565fc);
   // }
 
-  a:hover {
-    // text-decoration: underline;
-    color: #8565fc;
-    text-decoration-color: #8565fc;
-  }
+
+
 
   ul li:before {
     content: "";
@@ -118,12 +115,7 @@
     top: 16px;
   }
 
-  h2 {
-    // padding: 30px 0 12px 0;
-    font-weight: 700;
-    font-size: 25px;
-    margin: 36px 0 5px 0;
-  }
+
 
   h3 {
     margin: 26px 0 0;
@@ -132,5 +124,131 @@
   img {
     padding: 15px 0;
   }
-
 }
+
+
+h2 {
+  // padding: 30px 0 12px 0;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 40px 0 16px 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+ul li {
+  line-height: 1.8;
+}
+
+/* Share Bar */
+#share-bar {
+  font-size: 20px;
+}
+
+/* Title */
+#share-bar h4 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* All buttons */
+.share-buttons {}
+
+/* Each button */
+.share-button {
+  margin: 0px;
+  margin-bottom: 10px;
+  margin-right: 3px;
+  border: 1px solid #D3D6D2;
+  padding: 5px 10px 5px 10px;
+}
+
+.share-button:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Facebook button */
+.fa-facebook-official {
+  color: #3b5998;
+}
+
+.fa-facebook-official:hover {
+  background-color: #3b5998;
+}
+
+/* Twitter button */
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-twitter:hover {
+  background-color: #55acee;
+}
+
+/* Google-PLus button */
+.fa-google-plus {
+  color: #dd4b39;
+}
+
+.fa-google-plus:hover {
+  background-color: #dd4b39;
+}
+
+/* Pinterest button */
+.fa-pinterest-p {
+  color: #cb2027;
+}
+
+.fa-pinterest-p:hover {
+  background-color: #cb2027;
+}
+
+/* Tumblr button */
+.fa-tumblr {
+  color: #32506d;
+}
+
+.fa-tumblr:hover {
+  background-color: #32506d;
+}
+
+/* Reddit button */
+.fa-reddit-alien {
+  color: #ff4500;
+}
+
+.fa-reddit-alien:hover {
+  background-color: #ff4500;
+}
+
+/* LinkedIn button */
+.fa-linkedin {
+  color: #007bb5;
+}
+
+.fa-linkedin:hover {
+  background-color: #007bb5;
+}
+
+/* Email button */
+.fa-envelope {
+  color: #444444;
+}
+
+.fa-envelope:hover {
+  background-color: #444444;
+}
+
+// ul li:before {
+//   content: "";
+//   position: absolute;
+//   width: 8px;
+//   height: 8px;
+//   background-color: #c1cad4;
+//   border-radius: 50%;
+//   left: -22px;
+//   top: 16px;
+// }
