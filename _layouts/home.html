@@ -14,9 +14,9 @@ layout: default
 
       <h1 class="catalogue-title">{{ post.title }}</h1>
       <div class="catalogue-line"></div>
-      <!-- <p class="catalogue-sub">
-          {{ post.description }}
-        </p>  -->
+      <p class="catalogue-sub">
+        {{ post.description }}
+      </p>
       <p class="catalogue-text">
         {{ post.content | strip_html | truncatewords: 30 }}
       </p>

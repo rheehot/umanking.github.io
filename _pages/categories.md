@@ -18,7 +18,6 @@ permalink: /categories/
         <span style="font-size: 20px"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></span>
       </li>
     </ul>
-      <!-- <span style="color: gray; font-size: small;" class="post-date">{{post.date | date_to_long_string }}</span> -->
     </article>
     {% endfor %}
   </div>

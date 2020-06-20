@@ -2,52 +2,27 @@
 layout: default
 ---
 <div class="post">
-  <!-- <div class="post-info">
+  <div class="post-info">
     <span style="font-style: italic;">Written by</span>
     {% if page.author %}
     {{ page.author }}
     {% else %}
     {{ site.author.name }}
     {% endif %}
-
     {% if page.date %}
     <br>
     <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
-  </div> -->
+  </div>
   <div class="post-all">
-    <div class="post-tag">
-      {% assign categories = page.categories | sort  | split: ',' %}
-      {% capture titlecase %}
-      {% for category in categories %}
-      {{ category | capitalize }}
-      {% endfor %}
-      {% endcapture %}
-      {{ page.categories }}
-    </div>
     <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-subtitle">{{ page.subtitle }}</div>
   </div>
 </div>
-<!-- <div class="post-line"></div> -->
-<!-- {% include ad.html %} -->
-<!-- {% assign categories = page.categories | sort  | split: ',' %}
-  {% capture titlecase %}
-  {% for category in categories %}
-  {{ category | capitalize }}
-  {% endfor %}
-  {% endcapture %}
-
-  {{ page.categories }} -->
-<!-- <a href="{{ site.url }}/categories/#{{ page.categories }}">
-    <div class="" style="display: right; margin-bottom: 20px;">#{{ page.categories }}</div>
-  </a> -->
-<!-- <div class="" style="display: left;">tags: {{ page.tags }}</div> -->
+<div class="post-line"></div>
 {{ content | toc }}
 </div>
 <div>
   {% include ad.html %}
-
   {% include buy_me_a_coffee.html %}
   {% include share-bar.html %}
   {% include relatedPost.html %}
