@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템18.상속보다는 컴포지션을 사용하라"
+title: "[이펙티브 자바] 아이템18.상속보다는 컴포지션을 사용하라"
 categories: [effective java]
 tags: [effective java]
 date: 2020-03-03 19:25 +0900

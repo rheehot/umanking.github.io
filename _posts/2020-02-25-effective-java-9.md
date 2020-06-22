@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템9.try-finally보다는 try-with-resouce를 사용하라"
+title: "[이펙티브 자바] 아이템9.try-finally보다는 try-with-resouce를 사용하라"
 description: 이펙티브 자바, 아이템9.try-finally보다는 try-with-resouce를 사용하라
 categories: [effective java]
 tags: [effective java]

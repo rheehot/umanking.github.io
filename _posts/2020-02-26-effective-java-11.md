@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템11.equals를 재정의하려거든 hashCode도 재정의하라"
+title: "[이펙티브 자바] 아이템11.equals를 재정의하려거든 hashCode도 재정의하라"
 description: 이펙티브 자바, 아이템11.equals를 재정의하려거든 hashCode도 재정의하라.
 categories: [effective java]
 tags: [effective java]

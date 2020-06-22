@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템17.변경 가능성을 최소화하라💯"
+title: "[이펙티브 자바] 아이템17.변경 가능성을 최소화하라💯"
 description: 불변 클래스란 무엇인가? 어떤 장점들이 있나? 만드는 방법에 대해서 알아본다.
 categories: [effective java]
 tags: [effective java]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템16.public클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라"
+title: "[이펙티브 자바] 아이템16.public클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라"
 description: 자바 접근자 메서드를 활용한다.
 categories: [effective java]
 tags: [effective java]

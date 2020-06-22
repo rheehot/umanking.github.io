@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[이펙티브 자바 3판] 아이템7.다 쓴 객체 참조를 해제하라"
+title: "[이펙티브 자바] 아이템7.다 쓴 객체 참조를 해제하라"
 description: 이펙티브 자바, 아이템7.다 쓴 객체 참조를 해제하라
 categories: [effective java]
 tags: [effective java]
