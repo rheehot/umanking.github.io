@@ -3,7 +3,7 @@ layout: post
 title: "Modern Java In Action #9. 람다로 객체지향 디자인 패턴 리팩토링하기"
 date: 2020-05-04 15:29 +0900
 categories: [Java]
-tags: [modern java in action]
+tags: [Java]
 ---
 
 > 모던자바인 액션에서 나온 객체지향 디자인 패턴을 람다로 리팩토링 하는 예제 입니다.

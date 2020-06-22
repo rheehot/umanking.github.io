@@ -3,7 +3,7 @@ layout: post
 title: "Java8 새로운 날짜와 시간 API 정리"
 date: 2020-05-09 12:19 +0900
 categories: [Java]
-tags: [modern java in action]
+tags: [Java]
 ---
 
 > - 자바의 날짜, 시간 관련된 히스토리, 8버전에서 추가된 새로운 날짜,시간 API 기본 사용법을 알아본다.
