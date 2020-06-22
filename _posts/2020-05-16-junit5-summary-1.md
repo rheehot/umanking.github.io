@@ -2,23 +2,24 @@
 layout: post
 title: "Junit5 정리"
 date: 2020-05-16 11:27 +0900
-categories: [JUnit] 
-tags: [JUnit]
+categories: [Junit]
+tags: [Junit]
 ---
+
 ![](https://miro.medium.com/max/881/1*J8sjpKQJswCKiPUYVefbgQ.jpeg)
+
 > 해당 포스팅은 인프런의 백기선님 강의를 요약한 내용입니다. 더 자세한 내용은 Junit Reference를 참고하세용!
 
-
 ## JUnit5 개요
--   junit platform : launcher 같은 역할
--   vintage: junit3,4 구현체
--   jupitor: junit5 구현체, 목성(주피터)이 행성의 5번째임
 
+- junit platform : launcher 같은 역할
+- vintage: junit3,4 구현체
+- jupitor: junit5 구현체, 목성(주피터)이 행성의 5번째임
 
+## Junit5 의존성 추가
 
-## Junit5 의존성 추가 
--   Spring Boot 2.2.x 버전대 이상을 사용하면 JUnit5 모듈이 자동으로 들어간다.
--   Spring Boot를 사용하지 않는다면 다음과 같이 의존성을 추가한다.
+- Spring Boot 2.2.x 버전대 이상을 사용하면 JUnit5 모듈이 자동으로 들어간다.
+- Spring Boot를 사용하지 않는다면 다음과 같이 의존성을 추가한다.
 
 ```xml
 <dependency>
@@ -30,13 +31,12 @@ tags: [JUnit]
 ```
 
 # 사용방법
+
 ## @DisplayName
 
-`@DiaplayName("주문 성공 테스트")`  와 같은 형태로 junit 실행후 하단에 표시되는 report 에 한글로 표시된다. 더이상 메서드 이름을 한글로 작성하지 않아도 된다. (junit5) 부터는
+`@DiaplayName("주문 성공 테스트")` 와 같은 형태로 junit 실행후 하단에 표시되는 report 에 한글로 표시된다. 더이상 메서드 이름을 한글로 작성하지 않아도 된다. (junit5) 부터는
 
-
-
-## Junit Assertions 
+## Junit Assertions
 
 ### assertEquals
 
@@ -46,7 +46,7 @@ public static void assertEquals(Object expected, Object actual) {
 }
 ```
 
-크게 중요한건 아니지만, 첫번째 파라미터는 expected 값을, 두번째 파라미터는 실제 값을 넣어주는 게  Junit API를 이해하고 사용하는 사람에게 조금 더 와 닿지 않을까? 
+크게 중요한건 아니지만, 첫번째 파라미터는 expected 값을, 두번째 파라미터는 실제 값을 넣어주는 게 Junit API를 이해하고 사용하는 사람에게 조금 더 와 닿지 않을까?
 
 > ✅ assertEquals의 세번째 파라미터값이 String message 도 있지만, Supplier<String> 도 존재한다. 어떤 차이인가?
 >
@@ -54,8 +54,8 @@ public static void assertEquals(Object expected, Object actual) {
 >
 > 해당 메서드는 테스트가 실패하는 케이스에 세번째 파라미터값으로 입력한 message내용이 출력된다.
 >
-> 그냥 문자열을 입력한 경우에는 매번 해당 연산을 수행한다.(실패하든, 성공하든 상관없이) 
-> 하지만 Supplier<String> 으로 람다식으로 해서 넘기게 된다면, 실제 실패하는 경우(lazy evaluation)을 통해서 실행된다. 그래서 문자열이 모든 테스트에 존재하는 경우라면, Supplier를 사용하는 것이 효율적이다!! 
+> 그냥 문자열을 입력한 경우에는 매번 해당 연산을 수행한다.(실패하든, 성공하든 상관없이)
+> 하지만 Supplier<String> 으로 람다식으로 해서 넘기게 된다면, 실제 실패하는 경우(lazy evaluation)을 통해서 실행된다. 그래서 문자열이 모든 테스트에 존재하는 경우라면, Supplier를 사용하는 것이 효율적이다!!
 
 ### assertAll
 
@@ -71,8 +71,6 @@ assertAll(
 2건다 실패한 것에 대해서 명확하게 리포팅해준다.
 
 ![](https://user-images.githubusercontent.com/28615416/82106522-8ad19d80-975c-11ea-937f-3d9d92324c4b.png)
-
-
 
 ### assertThrows
 
@@ -91,9 +89,9 @@ public Study(int limit) {
 assertThrows(IllegalArgumentException.class, () -> new Study(-10));
 ```
 
-첫번째 파라미터는 기대되는 exception의 타입, 두번째는 Executable 로 어떤 실행을 했을때를 넘긴다. 
+첫번째 파라미터는 기대되는 exception의 타입, 두번째는 Executable 로 어떤 실행을 했을때를 넘긴다.
 
-다음과 같이 해당 Exception을 받아서 메세지도 동일한지 테스트 할 수 있다. 
+다음과 같이 해당 Exception을 받아서 메세지도 동일한지 테스트 할 수 있다.
 
 ```java
 IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> new Study(-10));
@@ -111,9 +109,7 @@ assertTimeout(Duration.ofMillis(100), () -> {
 
 100 millieSeconds를 기대했지만, 실제 300milieSeconds가 나오기 때문에 위 케이스는 실패한다.
 
-
-
-## 조건에 따른 테스트 
+## 조건에 따른 테스트
 
 #### programming 방법
 
@@ -136,11 +132,9 @@ assumingThat(System.getenv().get("TEST_ENV").equals("andrew"), () -> {
 });
 ```
 
-assumingThat를 통해서 코드 블럭으로 지정할 수 있다. 
+assumingThat를 통해서 코드 블럭으로 지정할 수 있다.
 
-
-
-#### annotaion 기반 
+#### annotaion 기반
 
 ```java
 @Test
@@ -148,13 +142,11 @@ assumingThat를 통해서 코드 블럭으로 지정할 수 있다.
 @EnabledOnOs(OS.MAC)
 @EnabledIfEnvironmentVariable(named = "TEST_ENV", matches = "andrew")
 void test(){
-    // .. 
+    // ..
 }
 ```
 
-다음과 같이 어노테이션 기반으로도, 원하는 조건들을 설정할 수 있다. 
-
-
+다음과 같이 어노테이션 기반으로도, 원하는 조건들을 설정할 수 있다.
 
 ## Tag & Filtering
 
@@ -164,7 +156,7 @@ void test(){
 @Test
 @Tag("fast")
 void study_test1() {
-    
+
 }
 
 @Test
@@ -174,16 +166,16 @@ void study_test2() {
 }
 ```
 
-- 1) intellij 에서 Edit Configuration - Test Kind를 Tags 로 바꾸고, expression 에 `fast` or `slow` 위에서 입력했던 Tag값을 넣고 실행하면 해당 Tagging 되어있는 테스트 케이스만 동작함 
+- 1. intellij 에서 Edit Configuration - Test Kind를 Tags 로 바꾸고, expression 에 `fast` or `slow` 위에서 입력했던 Tag값을 넣고 실행하면 해당 Tagging 되어있는 테스트 케이스만 동작함
 
-- 2) pom.xml 에서 profile 에 따른 test 실행을 변경하기. 
+- 2. pom.xml 에서 profile 에 따른 test 실행을 변경하기.
 
   - local 환경에서는 fast 붙은것만 테스트 실행
   - production (CI) 환경에서는 fast, slow 전체 테스트 실행
 
   ```xml
   <profiles>
-        <!-- 로컬 환경에서는 fast만 테스트 -->  
+        <!-- 로컬 환경에서는 fast만 테스트 -->
           <profile>
               <id>default</id>
               <activation>
@@ -202,8 +194,8 @@ void study_test2() {
                   </plugins>
               </build>
           </profile>
-      
-    <!-- ci 환경에서는 전체 테스트 -->  
+
+    <!-- ci 환경에서는 전체 테스트 -->
           <profile>
               <id>production</id>
               <build>
@@ -223,8 +215,6 @@ void study_test2() {
   ```
 
   설정후에 `mvn test` 혹은 production 환경에서 테스트 하고 싶다면 `mvn test -Pproduction` 입력
-
-
 
 ## Custom Tag (Composed Annotation)
 
@@ -259,11 +249,9 @@ void study_test2() {
 }
 ```
 
-
-
 ## ParameterizedTest (테스트 반복하기)
 
-파라미터로 넘긴값을 객체에 매핑해서 사용하려면 어떻게 해야 할까? 
+파라미터로 넘긴값을 객체에 매핑해서 사용하려면 어떻게 해야 할까?
 
 ```java
 @ParameterizedTest
@@ -273,7 +261,7 @@ void test1(@ConvertWith(StudyConverter.class) Study study) {
 }
 ```
 
-SimpleArgumentConverter를 구현한 StudyConverter 를 작성하고 `@ConvertWith` 어노테이션으로 넘겨준다. 
+SimpleArgumentConverter를 구현한 StudyConverter 를 작성하고 `@ConvertWith` 어노테이션으로 넘겨준다.
 
 ```java
 // single argument
@@ -286,7 +274,7 @@ static class StudyConverter extends SimpleArgumentConverter {
 }
 ```
 
-단일 값인 경우가 아니라 여러개의 파라미터를 갖는 값인 경우에는 어떻게 할까? 
+단일 값인 경우가 아니라 여러개의 파라미터를 갖는 값인 경우에는 어떻게 할까?
 
 ```java
 // 생성자
@@ -296,9 +284,7 @@ public Study(int limit, String name) {
 }
 ```
 
-
-
-@CsvSource를 통해서 `,`  (콤마)를 통해서 해당 값들을 넘겨줄 수 있다. 이번에는 ArgumentsAggregator 를 구현해야 한다.
+@CsvSource를 통해서 `,` (콤마)를 통해서 해당 값들을 넘겨줄 수 있다. 이번에는 ArgumentsAggregator 를 구현해야 한다.
 
 ```java
 @ParameterizedTest
@@ -320,8 +306,7 @@ static class StudyAggregator implements ArgumentsAggregator {
 }
 ```
 
-
-## 테스트 순서 
+## 테스트 순서
 
 기본 Junit Test는 메서드 실행당 새로운 인스턴스를 만든다. Junit5 에서는 Class당 테스트 인스턴스를 만들 수 있도록 해당 기능을 제공한다. 다음과 같이 클래스 레벨에 작성할 수 있다.
 
@@ -335,13 +320,11 @@ static class StudyAggregator implements ArgumentsAggregator {
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 ```
 
-> ❗️주의사항, `@Order` 애노테이션은 스프링에서 제공하는 것도 있다. 이것은 빈의 순서를 정의 하는 것이므로, 반드시 junit에서 제공하는 `@Order`어노테이션을 사용해야 한다! 
+> ❗️주의사항, `@Order` 애노테이션은 스프링에서 제공하는 것도 있다. 이것은 빈의 순서를 정의 하는 것이므로, 반드시 junit에서 제공하는 `@Order`어노테이션을 사용해야 한다!
 
+## JUnit 확장하기
 
-
-## JUnit 확장하기 
-
-- junit4 확장은 Runner, TestRule, MethodRule,.. 
+- junit4 확장은 Runner, TestRule, MethodRule,..
 - junit5 확장은 ExtensionWith 단 하나만 존재함
 
 > 일반 테스트에서 특정 시간(1000 millies) 을 넘으면 @SlowTest 어노테이션을 붙이도록 만들어라
@@ -349,7 +332,7 @@ static class StudyAggregator implements ArgumentsAggregator {
 다음과 같이 BeforeTestExecutionCallback, AfterTestExecutionCallback 인터페이스를 구현한다.
 
 ```java
-public class FindSlowTestExecution implements BeforeTestExecutionCallback, AfterTestExecutionCallback {    
+public class FindSlowTestExecution implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
     @Override
     public void beforeTestExecution(ExtensionContext extensionContext) {
     }
@@ -360,7 +343,7 @@ public class FindSlowTestExecution implements BeforeTestExecutionCallback, After
 }
 ```
 
-ExtensionContext.Store 를 만들기 위해서 해당 context에서 테스트 클래스 네임, 테스트 메서드 네임정보를 넘긴다. 
+ExtensionContext.Store 를 만들기 위해서 해당 context에서 테스트 클래스 네임, 테스트 메서드 네임정보를 넘긴다.
 store에 시작 시간 정보를 기록하고, afterTestExecution 메서드에서 시간기록 차이(duration) 을 구한다. 그 차이값이 1000 millies 를 넘게 되면 로그를 찍는다.
 
 ```java
@@ -393,15 +376,15 @@ public void afterTestExecution(ExtensionContext extensionContext) {
 ```java
 @ExtendWith(FindSlowTestExecution.class)
 class StudyTest {
-    
+
 }
 ```
 
-지금까지 살펴본 방법은 확장팩을 선언적으로 등록하는 방법이었다. 하지만 선언적으로 확장팩을 등록하는 방법은 이미 등록한 클래스를 수정하기가 어렵다. 종속적이다. 다음에는 프로그래밍적인 방법을 통해서 THRESHOLD 값을 어떻게 변경할 수 있는지 알아보자! 
+지금까지 살펴본 방법은 확장팩을 선언적으로 등록하는 방법이었다. 하지만 선언적으로 확장팩을 등록하는 방법은 이미 등록한 클래스를 수정하기가 어렵다. 종속적이다. 다음에는 프로그래밍적인 방법을 통해서 THRESHOLD 값을 어떻게 변경할 수 있는지 알아보자!
 
 ```java
 public class FindSlowTestExecution implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
-    
+
     private final long THRESHOLD;
 	// 생성자 주입
     public FindSlowTestExecution(long THRESHOLD) {
@@ -409,22 +392,20 @@ public class FindSlowTestExecution implements BeforeTestExecutionCallback, After
     }
 ```
 
-실제 사용하는 것은 @RegisterExtension으로 해당 클래스를 생성하는 방법이다. 
+실제 사용하는 것은 @RegisterExtension으로 해당 클래스를 생성하는 방법이다.
 
 ```java
 class StudyTest {
 
     @RegisterExtension
     static FindSlowTestExecution findSlowTestExecution = new FindSlowTestExecution(1000);
-    
+
 }
 ```
 
+## Junit4 -> Junit5 마이그레이션
 
-
-## Junit4 -> Junit5 마이그레이션 
-
-springboot 프로젝트 2.x.x 시작하게 되면 기본으로 junit5가 들어가고, junit-vintage-engine이 exlude 된다. 
+springboot 프로젝트 2.x.x 시작하게 되면 기본으로 junit5가 들어가고, junit-vintage-engine이 exlude 된다.
 
 ```xml
 <dependency>
@@ -440,5 +421,4 @@ springboot 프로젝트 2.x.x 시작하게 되면 기본으로 junit5가 들어�
 </dependency>
 ```
 
-vinatage 엔진은 junit 4의 구현체이고, jupitor가 junit5 구현체이다. 마이그레이션을 할 때는 exclude 된 junit-vintage-engine을 삭제 하면 junit4 기반으로 테스트를 할수도 있고, 기존의 작성된 junit4 기반의 테스트도 돌아간다. 하지만 spring에서 100% migration을 지원하지 않는다. 가령 Rule 관련된 것은 지원하지 않기 때문에 `junit-jupiter-migrationsuppor` 디펜던시를 추가해줘야 한다. 
-
+vinatage 엔진은 junit 4의 구현체이고, jupitor가 junit5 구현체이다. 마이그레이션을 할 때는 exclude 된 junit-vintage-engine을 삭제 하면 junit4 기반으로 테스트를 할수도 있고, 기존의 작성된 junit4 기반의 테스트도 돌아간다. 하지만 spring에서 100% migration을 지원하지 않는다. 가령 Rule 관련된 것은 지원하지 않기 때문에 `junit-jupiter-migrationsuppor` 디펜던시를 추가해줘야 한다.
