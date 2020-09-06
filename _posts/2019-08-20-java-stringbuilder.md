@@ -3,7 +3,7 @@ layout: post
 title: "[Java] StringBuffer, StringBuilder의 차이"
 categories: [Java]
 tags: [Java]
-date: 2019-08-20 17:40:48
+date: 2020-09-06 17:40:48
 redirect_from:
   - 2019/08/20/java-stringbuilder/
   - java/java-stringbuilder
