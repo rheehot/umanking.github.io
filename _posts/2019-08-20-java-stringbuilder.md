@@ -14,8 +14,6 @@ redirect_from:
 
 Java에서는 문자열을 다루는데 String, StringBuffer,StringBuilder를 사용합니다. 각각 어떤 상황에서 사용해야 하는지 알아보도록 하겠습니다.
 
-
-
 ### String Pool? 
 
 ```java
