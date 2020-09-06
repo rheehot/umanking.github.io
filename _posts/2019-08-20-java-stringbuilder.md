@@ -10,13 +10,13 @@ redirect_from:
   - 2019/08/20/java-stringbuilder.html
 ---
 
-> String, StringBuffer, StringBuilder 차이점에 대해서 알아보겠습니다.
+
+
+Java에서는 문자열을 다루는데 String, StringBuffer,StringBuilder를 사용합니다. 각각 어떤 상황에서 사용해야 하는지 알아보도록 하겠습니다.
 
 
 
 ### String Pool? 
-
-자바에서 String을 만드는 방법은 2가지가 있습니다. 
 
 ```java
 public static void main(String[] args){
@@ -36,7 +36,11 @@ public static void main(String[] args){
 
 
 
-![Journal Dev 발췌](https://cdn.journaldev.com/wp-content/uploads/2012/11/String-Pool-Java1.png) 
+![Journal Dev 발췌](https://cdn.journaldev.com/wp-content/uploads/2012/11/String-Pool-Java1.png)
+
+> 왜 String Pool을 사용할까? Connection Pool, Thread Pool, 모든 풀을 사용하는 이유는 당연히 재활용하기 위해서입니다.
+
+
 
 ### String 클래스의 intern메서드는? 
 
@@ -73,3 +77,4 @@ StringBuffer는 모든 public 메서드에 `syncronized` 키워드가 붙어있�
 - `StringBuilder`는 thread-safe 하지 않지만, 성능은 빠르다.
 - 그래서 멀티스레드 환경이 아닌, 문자열 연산이 많은 경우에는 → StringBuilder를 사용한다.
 - 문자열 연산이 많이 없고, 단순히 값들만을 가져오는 경우에는 → String Pool에서 가져오므로 String 사용한다.
+
