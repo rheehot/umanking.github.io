@@ -27,7 +27,7 @@
     @include transition(all .3s ease-out);
     color: $default-color;
     position: absolute;
-
+    font-family: $sans-serif;
     &:hover,
     &:focus {
       opacity: .6;
