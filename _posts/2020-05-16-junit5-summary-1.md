@@ -6,8 +6,6 @@ categories: [Junit]
 tags: [Junit]
 ---
 
-![](https://miro.medium.com/max/881/1*J8sjpKQJswCKiPUYVefbgQ.jpeg)
-
 > 해당 포스팅은 인프런의 백기선님 강의를 요약한 내용입니다. 더 자세한 내용은 Junit Reference를 참고하세용!
 
 ## JUnit5 개요
@@ -30,13 +28,13 @@ tags: [Junit]
 </dependency>
 ```
 
-# 사용방법
 
-## @DisplayName
+
+### @DisplayName
 
 `@DiaplayName("주문 성공 테스트")` 와 같은 형태로 junit 실행후 하단에 표시되는 report 에 한글로 표시된다. 더이상 메서드 이름을 한글로 작성하지 않아도 된다. (junit5) 부터는
 
-## Junit Assertions
+
 
 ### assertEquals
 
@@ -108,6 +106,10 @@ assertTimeout(Duration.ofMillis(100), () -> {
 ```
 
 100 millieSeconds를 기대했지만, 실제 300milieSeconds가 나오기 때문에 위 케이스는 실패한다.
+
+
+
+
 
 ## 조건에 따른 테스트
 

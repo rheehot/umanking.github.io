@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-  <div class="post-info">
+  <!-- <div class="post-info">
     <span style="font-style: italic;">Written by</span>
     {% if page.author %}
     {{ page.author }}
@@ -13,18 +13,18 @@ layout: default
     <br>
     <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
-  </div>
+  </div> -->
   <div class="post-all">
     <h1 class="post-title">{{ page.title }}</h1>
   </div>
 </div>
-<div class="post-line"></div>
+<!-- <div class="post-line"></div> -->
 {{ content | toc }}
 </div>
 <div>
   {% include ad.html %}
   {% include buy_me_a_coffee.html %}
-  {% include share-bar.html %}
+  <!-- {% include share-bar.html %} -->
   {% include relatedPost.html %}
   {% include utterance_comments.html %}
 </div>

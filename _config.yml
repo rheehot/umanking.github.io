@@ -1,6 +1,6 @@
 # Site settings
 title: Andrew's Blog
-description: "Java, Spring을 주로 하고, 부족하지만 하나씩 정리하고 있습니다 !"
+description: "Java, Spring"
 
 baseurl: ""
 url: "https://umanking.github.io"
@@ -10,7 +10,7 @@ google_analytics: UA-130245279-5
 
 # Author
 author:
-  name: andrew
+  name: Andrew
   url: https://umanking.github.io
   email: umanking@gmail.com
 

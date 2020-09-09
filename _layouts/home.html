@@ -6,20 +6,22 @@ layout: default
   {% include ad.html %}
 
   {% for post in paginator.posts %}
-  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-    <div>
-      <span class="catalogue-type">{{ post.categories }}
-        | <small datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</small>
-      </span>
+  <!-- <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item"> -->
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <!-- <span class="catalogue-type">{{ post.categories }} -->
+        <!-- <small datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</small> -->
+      <!-- </span> -->
 
-      <h1 class="catalogue-title">{{ post.title }}</h1>
-      <div class="catalogue-line"></div>
+      <strong style="font-size: 20px;">{{ post.title }}</strong>
+      <small datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</small>
+      <!-- <div class="catalogue-line"></div>
       <p class="catalogue-sub">
         {{ post.description }}
       </p>
       <p class="catalogue-text">
         {{ post.content | strip_html | truncatewords: 30 }}
-      </p>
+      </p> -->
 
     </div>
   </a>
