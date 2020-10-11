@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "백엔드 주니어의 이직 이야기(feat.경력직 이직)"
+title: "백엔드 주니어 개발자의 이직 이야기(feat.경력직 이직)"
 date: 2020-10-11 20:10 +0900
 categories: [think]
 tags: [think]
