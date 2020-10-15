@@ -13,11 +13,11 @@ permalink: /categories/
     <h2 class="category-head">{{ category_name }}</h2>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-    <ul>
-      <li>
+    <!-- <ul> -->
+      <!-- <li> -->
         <span style="font-size: 20px"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></span>
-      </li>
-    </ul>
+      <!-- </li> -->
+    <!-- </ul> -->
     </article>
     {% endfor %}
   </div>

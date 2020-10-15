@@ -2,8 +2,8 @@
 layout: post
 title: "Thymeleaf 실무에서 자주 사용하는 것들"
 date: 2020-01-19 15:59 +0900
-categories: [spring]
-tags: [spring, thymeleaf]
+categories: [Spring]
+tags: [Spring, thymeleaf]
 ---
 
 > 모든 소스코드는 **[여기](https://github.com/umanking/blog-code-workspace)**에서 확인 가능합니다.  

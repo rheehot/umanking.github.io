@@ -11,11 +11,13 @@
 
             <!-- <h3 class="category-head">{{ category_name }}</h3> -->
             <a name="{{ category_name | slugize }}"></a>
-            {% for post in site.tags[tag_name] limit:5 %}
+            {% for post in site.tags[tag_name] %}
             <article class="archive-item">
-                <ul>
-                    <li :before><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
-                </ul>
+                <!-- <ul> -->
+                    <!-- <li :before> -->
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+                    <!-- </li> -->
+                <!-- </ul> -->
                 <!-- <span class="post-date">{{post.date | date_to_long_string }}</span> -->
                 <!-- <span class="post-dsate">{{post.date | date_to_long_string }}</div> -->
             </article>
