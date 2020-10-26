@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JPA] 다대일 매핑"
+title: "[JPA] 연관관계 매핑(다대일, 연관관계 주인)"
 date: 2019-04-12 09:05:25
 redirect_from:
   - 2019/04/12/jpa-1-n-mapping/
@@ -10,7 +10,7 @@ categories: [JPA]
 tags: [JPA]
 ---
 
-# 1.들어가며
+## 들어가며
 
 JPA 연관관계 매핑중, 실무에서 가장 많이 쓰이는 1:N (일대다) 매핑에 대해서 알아보자.  
 일대다 매핑을 하기 위해서 하나의 팀에 여러명의 멤버가 속해있는, 1:N 관계를 생각해보자.  
@@ -39,11 +39,45 @@ public class Team {
 
 이렇게 설정해야지만, team.getMemberList()를 통해서 접근 할 수 있다. 이렇게 객체간의 참조를 통해서 탐색하는 과정을 `객체 그래프 탐색`이라고 한다.
 
-### 외래키의 주인?
+## 외래키의 주인? 
 
-역시나 객체와 테이블간의 패러다임 불일치 중에 하나로, 외래키를 통해서 Join을 하게 되면, 각 테이블에서 외래키를 어디에 두고 사용하는 지는 중요하지 않다. 공유하는 느낌.
+@OneToMany에서 mappedBy 속성이 존재한다. 외래키의 주인을 설정하는 속성이다. 
 
-하지만, 객체에서는 각 엔티티마다 연관관계 매핑을 해야 하고, 외래키의 주인을 따로 설정해야 한다. 보통은 `@OneToMany(mappedBy = "team")` 를 통해서 mappedBy 프로퍼티의 반대편에서 외래키를 가지고 있다.
+
+외래키의 주인을 왜 설정해야 하나? 
+
+Entity의 양방향 매핑은 단방향 매핑2개로 존재한다. 
+- Member -> Team (단방향)
+- Team -> Member (단방향)
+
+하지만, 엔티티가 아닌 테이블에서는 연관관계는 다음과 같이 한개만 존재한다.
+- Member <-> Team (양방향)
+
+그렇기 때문에 Entity의 관리포인트가 2군데이기 때문에 **연관관계의 주인**을 설정해줘야 한다. 
+
+> 연관관계의 주인이면 무엇을 할수 있나? 
+> 연관관계의 주인만이 데이터베이스 연관관계와 매핑되고 외래키를 관리(등록, 수정, 삭제) 할수 있다. 반면에 주인이 아닌 쪽은 읽기만 할 수 있다. 
+
+
+#### 연관관계의 주인은 외래키가 있는곳!!!!!!!!!
+```java
+public class Member {
+    @ManyToOne
+    @JoinColumn(name="TEAM_ID")
+    private Team team;
+}
+```
+
+```java
+public class Team {
+    @OneToMany(mappedBy="team")
+    private List<Member> members = new ArrayList<>();
+}
+```
+
+다음과 같은 상황에서 연관관계의 주인은 mappedBy 속성의 반대에 있는 `Member.team` 을 갖는다.
+
+> 데이터베이스 테이블에서 항상 다애일 관계에서 다(Many) 쪽이 외래키를 가진다. 그래서 @ManyToOne에는 mappedBy속성이 존재하지 않고, @OneToMany에만 mappedBy 속성이 존재한다.
 
 # 2.예제 코드
 
@@ -81,14 +115,15 @@ public class Team {
     private String name;
 
     // 양방향 관계일 때만 설정함
-    //@OneToMany(mappedBy = "team")
-    //private List<Member> memberList;
+    @OneToMany(mappedBy = "team")
+    private List<Member> memberList;
 }
 ```
 
 Member과 Team간의 연관관계 매핑에서 핵심은
 
 `@ManyToOne` 과 `@JoinColumn` 의 쌍으로 이루어진다. 특히나 JoinColumn은 표시하지 않아도 JPA가 자동으로 해당 필드(team)에 \_ID를 붙여서 자동으로 생성해 주지만, 실무에서는 명시적으로 사용하는 것을 권한다.
+
 
 실제 테스트 케이스를 통해서 검증해보자.
 
