@@ -161,4 +161,14 @@ public class MemberTeamTests {
 }
 ```
 
+```
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into team (name, id) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into member (age, name, team_id, id) values (?, ?, ?, ?)
+Hibernate: select member0_.id as id1_0_0_, member0_.age as age2_0_0_, member0_.name as name3_0_0_, member0_.team_id as team_id4_0_0_, team1_.id as id1_1_1_, team1_.name as name2_1_1_ from member member0_ left outer join team team1_ on member0_.team_id=team1_.id where member0_.id=?
+```
+
+실제 나간 쿼리를 살펴보면, team 테이블에 데이터를 저장하고, member 테이블에 저장하고, 결과를 select해온다. 
+기본 `left outer join` 키워드가 나간것을 주목하자! 
 각각 Team과 Member가 저장되고, member.getTeam()를 통해서 객체 그래프 탐색까지 잘 되는 것을 확인할 수 있습니다.
