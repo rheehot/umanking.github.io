@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JPA] 1:N 매핑"
+title: "[JPA] 다대일 매핑"
 date: 2019-04-12 09:05:25
 redirect_from:
   - 2019/04/12/jpa-1-n-mapping/
@@ -47,8 +47,6 @@ public class Team {
 
 # 2.예제 코드
 
-먼저 member -> team 의 단방향 관계를 살펴 보자.
-
 ```java
 @Data
 @Table(name = "MEMBER")
@@ -67,6 +65,9 @@ public class Member {
 
 }
 ```
+
+먼저 member -> team 의 단방향 관계를 살펴 보자.
+Member(다) : Team(일) 관계를 갖는다. @JoinColumn 은 TEAM_ID를 갖는다.
 
 ```java
 @Data
@@ -89,21 +90,23 @@ Member과 Team간의 연관관계 매핑에서 핵심은
 
 `@ManyToOne` 과 `@JoinColumn` 의 쌍으로 이루어진다. 특히나 JoinColumn은 표시하지 않아도 JPA가 자동으로 해당 필드(team)에 \_ID를 붙여서 자동으로 생성해 주지만, 실무에서는 명시적으로 사용하는 것을 권한다.
 
-실제 테스트 케이스를 통해서 검ㄴ증해보자.
+실제 테스트 케이스를 통해서 검증해보자.
 
 ```java
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Rollback(false)
-public class DemoApplicationTests {
+public class MemberTeamTests {
 
     @Autowired
     private MemberRepository memberRepository;
+    
     @Autowired
     private TeamRepository teamRepository;
 
     @Test
     public void save() {
+        // given
         Team team = new Team();
         team.setName("A팀");
         teamRepository.save(team); // team 저장
@@ -114,9 +117,10 @@ public class DemoApplicationTests {
         member.setTeam(team); //member의 team setting
         memberRepository.save(member); //member 저장
 
+        //when
         Optional<Member> optionalMember = memberRepository.findById(member.getId());
 
-        //테스트 검증 코드
+        //then
         Assert.assertEquals(optionalMember.get().getTeam().getName(), "A팀");
     }
 }
