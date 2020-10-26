@@ -156,7 +156,7 @@ public class MemberTeamTests {
         Optional<Member> optionalMember = memberRepository.findById(member.getId());
 
         //then
-        Assert.assertEquals(optionalMember.get().getTeam().getName(), "A팀");
+        Assert.assertEquals(optionalMember.get().getTeam().getName(), team.getName());
     }
 }
 ```
